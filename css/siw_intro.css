@@ -1,0 +1,463 @@
+/* ========================================
+   SAUGUS IRON WORKS - INTRODUCTION SECTION
+   Modern CSS with 2000s Aesthetic
+   ======================================== */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1 {
+    color: #000066;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h2 {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+h3 {
+    color: #000066;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Layout Components */
+.ranger-section {
+    display: grid;
+    grid-template-columns: 216px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: start;
+}
+
+.ranger-image {
+    width: 216px;
+    height: 216px;
+}
+
+.ranger-text {
+    padding: 10px;
+}
+
+.ranger-face {
+    margin: 20px 0;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================================
+   INTRO_2 SPECIFIC STYLES
+   ======================================== */
+
+/* Horizontal image row */
+.images-horizontal {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 50px 0;
+}
+
+/* Question and Answer Section */
+.qa-section {
+    margin: 40px 0;
+}
+
+.qa-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.qa-table tr {
+    margin-bottom: 20px;
+}
+
+.qa-table td {
+    padding: 15px 20px;
+    vertical-align: middle;
+}
+
+.qa-table td.question {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    width: 60%;
+}
+
+.qa-table td.answer {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    width: 40%;
+}
+
+/* Color classes for questions and answers */
+.color-new-england { color: #000066; }
+.color-state { color: #990066; }
+.color-coast { color: #009933; }
+.color-direction { color: #FF6600; }
+
+/* ========================================
+   INTRO_3 SPECIFIC STYLES
+   ======================================== */
+
+/* Upper Half: Two Column Layout */
+.intro3-upper {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.intro3-left {
+    padding-right: 20px;
+}
+
+.intro3-right {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Maps Side by Side */
+.maps-side-by-side {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.intro-text {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* Passport Section with Styling */
+.passport-section {
+    background-color: #FFF9E6;
+    border: 2px solid #CC0033;
+    padding: 20px;
+    width: 100%;
+}
+
+.passport-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.passport-text {
+    color: #CC0033;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* Bottom Half: Full Width Text */
+.intro3-lower {
+    margin: 30px 0;
+}
+
+.info-text {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.maps-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* ========================================
+   TASK1_STAMPS SPECIFIC STYLES
+   ======================================== */
+
+/* Two Column Layout: 70% / 30% */
+.task1-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.task1-left {
+    padding-right: 20px;
+}
+
+.task1-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Left Column Text Styles */
+.task1-intro {
+    color: #000066;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.task1-callout {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.task1-instructions {
+    color: #000066;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+/* Green Background Boxes */
+.green-box {
+    background-color: #00CC00;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.green-box.center-text {
+    text-align: center;
+}
+
+/* Stamp Level Boxes */
+.stamp-level {
+    padding-left: 30px;
+}
+
+.stamp-level p {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Right Column Elements */
+.right-item {
+    width: 100%;
+    padding-top: 80px;
+}
+
+/* Rewards Container */
+.rewards-container {
+    text-align: center;
+}
+
+.rewards-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.rewards-text {
+    color: #000066;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+/* ========================================
+   CSS-BASED NAVIGATION ARROWS
+   ======================================== */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+    align-items: center;
+}
+
+/* Navigation Button Base - Replicate original arrow appearance */
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Arrow SVG Container */
+.nav-button svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Back Arrow - Blue gradient background */
+.nav-button.back {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Forward Arrow - Blue gradient background */
+.nav-button.forward {
+    background: linear-gradient(-135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover State - Brightens and slightly enlarges */
+.nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Active/Click State */
+.nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95);
+}
+
+/* Focus State for Keyboard Navigation */
+.nav-button:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Arrow Paths - White color to contrast with blue background */
+.nav-button path {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Accessibility - Screen Reader Text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+
+    .ranger-section {
+        grid-template-columns: 1fr;
+    }
+
+    .images-horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qa-table td.question,
+    .qa-table td.answer {
+        display: block;
+        width: 100%;
+        font-size: 24px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .intro-text,
+    .info-text,
+    .passport-text {
+        font-size: 24px;
+    }
+
+    .passport-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .maps-row {
+        flex-direction: column;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .navigation {
+        display: none;
+    }
+    
+    body {
+        max-width: 100%;
+        padding: 0;
+    }
+}
