@@ -377,6 +377,58 @@ img {
 }
 
 /* ========================================
+   QUICKFACTS1 SPECIFIC STYLES
+   ======================================== */
+
+/* Top Section: Text/Ranger Ron aligned with Mill Image */
+.quickfacts-top {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.quickfacts-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 285px;
+    justify-content: space-between;
+}
+
+.quickfacts-intro {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.quickfacts-right {
+    flex-shrink: 0;
+}
+
+/* Assignment Section: Portfolio Icon and Text */
+.assignment-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.assignment-text {
+    flex: 1;
+}
+
+.assignment-text p {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -511,6 +563,21 @@ img {
         text-align: center;
     }
 
+    .quickfacts-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quickfacts-left {
+        height: auto;
+    }
+
+    .assignment-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .maps-side-by-side {
         flex-direction: column;
         align-items: center;
@@ -541,7 +608,9 @@ img {
     .task1-intro,
     .task1-callout,
     .task1-instructions,
-    .rewards-text {
+    .rewards-text,
+    .quickfacts-intro,
+    .assignment-text p {
         font-size: 20px;
     }
 
