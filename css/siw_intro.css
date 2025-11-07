@@ -305,6 +305,78 @@ img {
 }
 
 /* ========================================
+   TASK2_PORTFOLIO SPECIFIC STYLES
+   ======================================== */
+
+/* Top Section: Ranger Ron with Instructions */
+.portfolio-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-intro {
+    flex: 1;
+}
+
+.portfolio-intro p {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Middle Section: Portfolio Formula */
+.portfolio-formula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.formula-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.formula-label {
+    color: #000066;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.formula-symbol {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Tip Section */
+.anvil-tip-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+.tip-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tip-text p {
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -411,6 +483,39 @@ img {
         align-items: center;
     }
 
+    .intro3-upper {
+        grid-template-columns: 1fr;
+    }
+
+    .task1-container {
+        grid-template-columns: 1fr;
+    }
+
+    .task1-right {
+        align-items: center;
+    }
+
+    .portfolio-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portfolio-formula {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .anvil-tip-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .maps-side-by-side {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .qa-table td.question,
     .qa-table td.answer {
         display: block;
@@ -432,14 +537,24 @@ img {
 
     .intro-text,
     .info-text,
-    .passport-text {
+    .passport-text,
+    .task1-intro,
+    .task1-callout,
+    .task1-instructions,
+    .rewards-text {
+        font-size: 20px;
+    }
+
+    .portfolio-intro p {
+        font-size: 24px;
+    }
+
+    .stamp-level p {
         font-size: 24px;
     }
 
     .passport-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        margin-top: 20px;
     }
 
     .maps-row {
