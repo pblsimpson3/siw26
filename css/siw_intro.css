@@ -429,6 +429,237 @@ img {
 }
 
 /* ========================================
+   QUICKFACTS2 SPECIFIC STYLES
+   Cloud-to-Oval Interactive Reveal
+   ======================================== */
+
+/* Body width override - needed for 3-column cloud grid (3×300px + 2×20px gap = 940px) */
+body:has(.cloud-grid) {
+    max-width: 1000px;
+}
+
+/* CSS Variables for Quickfacts2 */
+:root {
+  --qf2-cloud-width: 300px;
+  --qf2-cloud-height: 180px;
+  --qf2-gap: 20px;
+  --qf2-oval-fill: #CB6666;
+  --qf2-focus-outline: #FFD700;
+  --qf2-blue-cloud: #3265CB;
+  --qf2-purple-cloud: #9866C9;
+}
+
+/* Header Section */
+.quickfacts2-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quickfacts2-header h1 {
+    color: #000000;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.instruction-text {
+    color: #FF0000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Centered Grid: 3 columns, 2 rows */
+.cloud-grid {
+    display: grid;
+    grid-template-columns: repeat(3, var(--qf2-cloud-width));
+    gap: var(--qf2-gap);
+    justify-content: center;
+    max-width: calc(3 * var(--qf2-cloud-width) + 2 * var(--qf2-gap));
+    margin: 0 auto 40px auto;
+}
+
+/* Cloud Item Container */
+.cloud-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Interactive Cloud Button */
+.cloud-btn {
+    position: relative;
+    width: var(--qf2-cloud-width);
+    height: var(--qf2-cloud-height);
+    border: 0;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+/* Focus Outline - Gold/Yellow */
+.cloud-btn:focus {
+    outline: 4px solid var(--qf2-focus-outline);
+    outline-offset: 8px;
+    border-radius: 12px;
+}
+
+/* Cloud SVG fills the button */
+.cloud-svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Cloud Label (Question Text) */
+.cloud-label {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 8px;
+    color: #111;
+    pointer-events: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    display: inline-block;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+/* Checkmark (Top-Right) */
+.checkmark {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.9);
+    transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1);
+    pointer-events: none;
+}
+
+/* Show Checkmark When Revealed */
+.cloud-btn.revealed .checkmark {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Oval Element (Hidden by Default) */
+.oval {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.92);
+    width: calc(var(--qf2-cloud-width) - 8px);
+    height: calc(var(--qf2-cloud-height) - 8px);
+    border-radius: 999px;
+    background: var(--qf2-oval-fill);
+    border: 5px solid #000;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease, transform 0.36s cubic-bezier(0.2, 0.9, 0.2, 1);
+    text-align: center;
+}
+
+/* Oval Inner Content */
+.oval-inner {
+    color: #fff;
+    width: 100%;
+}
+
+.oval-question {
+    font-weight: 800;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.oval-answer {
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+/* Revealed State: Show Oval */
+.cloud-btn.revealed .oval {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+/* Hide Cloud Label When Revealed */
+.cloud-btn.revealed .cloud-label {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* Fade Cloud SVG When Revealed */
+.cloud-btn.revealed .cloud-svg {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.96);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* Responsive: 2 columns on tablets */
+@media (max-width: 920px) {
+    .cloud-grid {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        max-width: 720px;
+    }
+}
+
+/* Responsive: 1 column on phones */
+@media (max-width: 520px) {
+    :root {
+        --qf2-cloud-width: 220px;
+        --qf2-cloud-height: 120px;
+    }
+    
+    .cloud-grid {
+        grid-template-columns: repeat(1, minmax(160px, 1fr));
+        max-width: 320px;
+    }
+    
+    .cloud-label {
+        font-size: 0.95rem;
+    }
+    
+    .oval-question {
+        font-size: 0.9rem;
+    }
+    
+    .oval-answer {
+        font-size: 0.95rem;
+    }
+    
+    .quickfacts2-header h1 {
+        font-size: 36px;
+    }
+    
+    .instruction-text {
+        font-size: 18px;
+    }
+}
+
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -578,6 +809,16 @@ img {
         text-align: center;
     }
 
+    .facts-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fact-cloud {
+        width: 90%;
+        max-width: 300px;
+    }
+
     .maps-side-by-side {
         flex-direction: column;
         align-items: center;
@@ -620,6 +861,22 @@ img {
 
     .stamp-level p {
         font-size: 24px;
+    }
+
+    .quickfacts2-header h1 {
+        font-size: 36px;
+    }
+
+    .instruction-text {
+        font-size: 18px;
+    }
+
+    .cloud-question {
+        font-size: 36px;
+    }
+
+    .cloud-answer {
+        font-size: 16px;
     }
 
     .passport-section {
