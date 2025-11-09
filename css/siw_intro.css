@@ -839,6 +839,79 @@ body:has(.cloud-grid) {
 }
 
 /* ========================================
+   INTRO_4MEETSAMLIZ SPECIFIC STYLES
+   ======================================== */
+
+/* Top Section: Ranger Ron Left + Text */
+.meet-top-section {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.meet-text {
+    flex: 1;
+}
+
+.meet-text p {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Middle Section: Text + Ranger Ron Right */
+.meet-middle-section {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.meet-text-center {
+    flex: 1;
+    text-align: center;
+}
+
+.meet-text-center p {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Bottom Section: Elizabeth and Samuel */
+.meet-bottom-section {
+    display: flex;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+/* Individual Character Introduction */
+.character-intro {
+    display: flex;
+    gap: 15px;
+    align-items: column;
+}
+
+.character-text {
+    flex: 1;
+    text-align: right;
+}
+
+.character-text p {
+    color: #000066;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -1008,6 +1081,26 @@ body:has(.cloud-grid) {
         margin: 20px auto;
     }
 
+    .meet-top-section,
+    .meet-middle-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .meet-text-center {
+        text-align: center;
+    }
+
+    .character-intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character-text {
+        text-align: center;
+    }
+
     .facts-row {
         flex-direction: column;
         align-items: center;
@@ -1051,7 +1144,10 @@ body:has(.cloud-grid) {
     .rewards-text,
     .quickfacts-intro,
     .assignment-text p,
-    .summary-text p {
+    .summary-text p,
+    .meet-text p,
+    .meet-text-center p,
+    .character-text p {
         font-size: 20px;
     }
 
