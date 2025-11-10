@@ -1338,6 +1338,220 @@ audio:focus {
 }
 
 /* ========================================
+   COLONIAL_PP1_POSTCARD SPECIFIC STYLES
+   ======================================== */
+
+/* Page Header */
+.postcard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.postcard-header h1 {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.passport-assignment {
+    color: #990099;
+}
+
+.postcard-header h2 {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Top Section: Icons and Instructions */
+.postcard-top {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Column 1: Postcard images Ron and passport */
+.postcard-col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.postcard-instructions {
+    flex: 1;
+}
+
+.postcard-instructions p {
+    color: #000066;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 1em;
+}
+
+/* Middle Section: Green Instruction Box */
+.postcard-instruction-box {
+    background-color: #00FF00;
+    padding: 15px 30px;
+    margin: 5px auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+.postcard-instruction-box p {
+    color: #000066;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.postcard-instruction-box a {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+.postcard-instruction-box a:hover {
+    background-color: #FFFF99;
+}
+
+/* Bottom Section: Map and Question */
+.postcard-bottom {
+    margin: 40px 0;
+}
+
+.map-question-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.question-ron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.map-question {
+    color: #000066;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.england-map {
+    border: 2px solid #0066FF;
+    background-color: #0066FF;
+    padding: 5px;
+}
+
+/* ========================================
+   SIW_POSTCARDS PAGE SPECIFIC STYLES
+   ======================================== */
+
+/* Page Title */
+.postcards-title {
+    color: #003366;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.postcards-intro {
+    color: #000066;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Postcards Table */
+.postcards-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    border: 2px solid #003366;
+}
+
+.postcards-table thead {
+    background-color: #003366;
+    color: #FFFFFF;
+}
+
+.postcards-table th {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid #FFFFFF;
+}
+
+.postcards-table td {
+    padding: 15px;
+    border: 1px solid #CCCCCC;
+    vertical-align: top;
+}
+
+.postcards-table tbody tr:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+
+.postcards-table tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+/* Postcard Number Column */
+.postcard-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    width: 80px;
+}
+
+/* Postcard Image Column */
+.postcard-image-cell {
+    text-align: center;
+    width: 400px;
+}
+
+.postcard-thumbnail {
+    max-width: 350px;
+    height: auto;
+    border: 2px solid #666666;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.postcard-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.postcard-caption {
+    font-size: 14px;
+    font-style: italic;
+    color: #333333;
+    margin-top: 10px;
+}
+
+/* Credit Column */
+.postcard-credit {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+    width: 200px;
+}
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -1425,6 +1639,7 @@ audio:focus {
     white-space: nowrap;
     border: 0;
 }
+
 
 /* ========================================
    RESPONSIVE DESIGN
@@ -1525,6 +1740,28 @@ audio:focus {
 
     .character-text {
         text-align: center;
+    }
+
+    .postcard-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .postcard-instructions p {
+        font-size: 20px;
+    }
+
+    .map-question-section {
+        flex-direction: column;
+    }
+
+    .postcards-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .postcard-thumbnail {
+        max-width: 250px;
     }
 
     .iron-flow-top {
@@ -1669,6 +1906,21 @@ audio:focus {
 
     .maps-row {
         flex-direction: column;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .navigation {
+        display: none;
+    }
+    
+    body {
+        max-width: 100%;
+        padding: 0;
     }
 }
 
