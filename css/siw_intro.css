@@ -912,6 +912,129 @@ body:has(.cloud-grid) {
 }
 
 /* ========================================
+   THELETTER SPECIFIC STYLES
+   ======================================== */
+
+/* Header Section */
+.letter-header {
+    margin-bottom: 30px;
+}
+
+.letter-header h1 {
+    color: #003366;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Main Container: Audio + Location/Certificate */
+.audio-location-container {
+    display: flex;                    /* Creates flexible container */
+    justify-content: space-between;   /* Pushes items to opposite edges */
+    align-items: flex-end;            /* Aligns items to BOTTOM of container */
+    gap: 20px;                        /* Space between left and right sections */
+    margin: 30px 0;
+}
+
+/* Left Section: Audio Player */
+.audio-player-section {
+    display: flex;                    /* Makes ear icon + controls horizontal */
+    align-items: center;              /* Centers ear icon vertically with audio */
+    gap: 20px;                        /* Space between ear and audio controls */
+    height: 80px;                     /* Sets container height */
+}
+
+.audio-icon {
+    flex-shrink: 0;                   /* Prevents ear icon from shrinking */
+}
+
+.ear-icon {
+    width: 84px;
+    height: 68px;
+    transition: filter 0.3s ease;
+}
+
+.ear-icon:hover {
+    filter: hue-rotate(180deg) brightness(1.2);
+}
+
+.audio-controls {
+    display: flex;
+    flex-direction: column;           /* Stacks label above audio player */
+    gap: 5px;
+    justify-content: center;          /* Centers content vertically */
+}
+
+.audio-label {
+    color: #000066;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Style the HTML5 audio player */
+audio {
+    width: 100%;
+    max-width: 350px;
+    height: 40px;
+    outline: 2px solid #4169E1;
+    border-radius: 4px;
+}
+
+audio:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Right Section: Location Header + Certificate */
+.location-certificate-section {
+    display: flex;                    /* Makes text + image vertical stack */
+    flex-direction: row;           /* Stacks vertically */
+    align-items: flex-end;            /* Right-aligns both text and image */
+    justify-content: flex-end;        /* Pushes content to bottom */
+    gap: 5px;                         /* Small gap between text and image */
+}
+
+.letter-location {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;              /* Keeps text on one line */
+}
+
+/* Letter Content */
+.letter-content {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 30px 0;
+}
+
+.letter-content p {
+    margin-bottom: 1.5em; /* White line between paragraphs */
+    text-align: left;
+}
+
+.letter-signature {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    text-align: right;
+    margin-right: 150px;              /* 100px from right edge */
+    margin-bottom: 0.5em !important;
+}
+
+/* Character Images at Bottom */
+.letter-characters {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -1099,6 +1222,31 @@ body:has(.cloud-grid) {
 
     .character-text {
         text-align: center;
+    }
+
+    .audio-location-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .audio-player-section {
+        height: auto;
+    }
+
+    .location-certificate-section {
+        align-items: center;
+    }
+
+    audio {
+        max-width: 100%;
+    }
+
+    .letter-content {
+        font-size: 14px;
+    }
+
+    .letter-signature {
+        margin-right: 20px;
     }
 
     .facts-row {
