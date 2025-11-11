@@ -1,0 +1,462 @@
+/* ========================================
+   SAUGUS IRON WORKS - INDEX PAGE STYLES
+   Modern CSS with 2000s Aesthetic
+   ======================================== */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Accessibility - Skip to main content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   FIRE HEADER WITH ANIMATED GLOW EFFECT
+   ======================================== */
+
+.fire-header {
+    background-color: #000000;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 0; /* Remove gap - continuous black */
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.fire-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFF00;
+    text-shadow: 
+        0 0 10px #FF0000,
+        0 0 20px #FF0000,
+        0 0 30px #FF4500,
+        0 0 40px #FF6347,
+        0 0 50px #FF4500,
+        2px 2px 4px rgba(0,0,0,0.8);
+    animation: fireGlow 2s ease-in-out infinite alternate;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+/* Fire glow animation keyframes */
+@keyframes fireGlow {
+    0% {
+        text-shadow: 
+            0 0 10px #FF0000,
+            0 0 20px #FF0000,
+            0 0 30px #FF4500,
+            0 0 40px #FF6347,
+            0 0 50px #FF4500,
+            2px 2px 4px rgba(0,0,0,0.8);
+    }
+    100% {
+        text-shadow: 
+            0 0 15px #FF0000,
+            0 0 30px #FF4500,
+            0 0 45px #FF6347,
+            0 0 60px #FF7F50,
+            0 0 75px #FF8C00,
+            2px 2px 4px rgba(0,0,0,0.8);
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .fire-title,
+    .fire-link {
+        animation: none;
+    }
+}
+
+/* ========================================
+   THREE-COLUMN IMAGE GRID LAYOUT
+   ======================================== */
+
+.index-image-grid {
+    display: grid;
+    grid-template-columns: 233px 1fr 188px;
+    gap: 3px;
+    margin-bottom: 0; /* Remove gap - continuous black */
+    background-color: #000000; /* Black background wrapper */
+    padding: 3px; /* Small padding to create black frame effect */
+}
+
+/* Left column: Blast furnace and forge stacked */
+.index-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background-color: #000000; /* Black background behind images */
+    padding: 0;
+}
+
+/* Right column: Interior views stacked */
+.index-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background-color: #000000; /* Black background behind images */
+    padding: 0;
+}
+
+/* All index page images */
+.index-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #666;
+    display: block;
+}
+
+/* ========================================
+   YELLOW INFORMATION BOX (CENTER COLUMN)
+   ======================================== */
+
+.index-yellow-box {
+    background-color: #FFFF00;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.yellow-box-content {
+    width: 100%;
+}
+
+.virtual-exploration {
+    color: #000099;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.subject-areas {
+    color: #000099;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Author credits section */
+.author-credits {
+    margin: 20px 0;
+}
+
+.author-credits p {
+    margin: 5px 0;
+    color: #000099;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Metadata text */
+.last-updated {
+    font-size: 11px;
+    font-weight: bold;
+    margin: 20px 0 5px 0;
+    color: #000;
+}
+
+.version-info {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    margin: 5px 0 0 0;
+}
+
+.project-teach {
+    color: #0000FF;
+}
+
+/* ========================================
+   SIGN AND WATER WHEEL ROW
+   ======================================== */
+
+/* Sign and water wheel row - three column grid */
+.index-sign-row {
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.sign-container {
+    justify-self: start;
+}
+
+/* Center fire icons in middle column */
+.fire-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.waterwheel-container {
+    justify-self: end;
+}
+
+
+/* ========================================
+   PARENT/TEACHER SECTION WITH FIRE EFFECT
+   ======================================== */
+
+.parent-teacher-section {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px; /* Space before navigation */
+    border-top: none; /* Continuous with sign row */
+}
+
+.fire-link {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFF00;
+    text-decoration: none;
+    text-shadow: 
+        0 0 8px #FF0000,
+        0 0 15px #FF4500,
+        0 0 25px #FF6347,
+        1px 1px 3px rgba(0,0,0,0.8);
+    animation: fireGlow 2s ease-in-out infinite alternate;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #FF6347;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.fire-link:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+.fire-link:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   NAVIGATION (Styles in siw_intro.css)
+   ======================================== */
+
+/* ========================================
+   CSS-BASED NAVIGATION ARROWS
+   ======================================== */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+    align-items: center;
+}
+
+/* Navigation Button Base - Replicate original arrow appearance */
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Arrow SVG Container */
+.nav-button svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Back Arrow - Blue gradient background */
+.nav-button.back {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Forward Arrow - Blue gradient background */
+.nav-button.forward {
+    background: linear-gradient(-135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover State - Brightens and slightly enlarges */
+.nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Active/Click State */
+.nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95);
+}
+
+/* Focus State for Keyboard Navigation */
+.nav-button:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Arrow Paths - White color to contrast with blue background */
+.nav-button path {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Accessibility - Screen Reader Text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+.site-footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border-top: 2px solid #003366;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+
+    .fire-title {
+        font-size: 32px;
+    }
+
+    /* Stack columns vertically on mobile */
+    .index-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .index-sign-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .sign-fire-container {
+        justify-content: center;
+    }
+
+    .waterwheel-container {
+        justify-content: center;
+    }
+
+    .virtual-exploration {
+        font-size: 24px;
+    }
+
+    .subject-areas {
+        font-size: 16px;
+    }
+
+    .fire-link {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .fire-title {
+        font-size: 24px;
+    }
+
+    .virtual-exploration {
+        font-size: 20px;
+    }
+
+    .subject-areas {
+        font-size: 14px;
+    }
+
+    .author-credits p {
+        font-size: 12px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .navigation {
+        display: none;
+    }
+    
+    body {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .fire-title,
+    .fire-link {
+        animation: none;
+        text-shadow: none;
+        color: #000000;
+    }
+}
