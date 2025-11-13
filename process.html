@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose your adventure path: Simple Machines, Rocks and Minerals, or Colonial Life at the Saugus Iron Works.">
+    <meta name="keywords" content="simple machines, rocks and minerals, colonial life, Saugus Iron Works, educational adventure">
+    <title>Choose Your Adventure - The Saugus Iron Works</title>
+    <link rel="stylesheet" href="css/siw_intro.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Main content area -->
+    <main id="main-content">
+        <!-- Top row: Simple Machines centered with orange boxes on sides -->
+        <div class="process-top-row">
+            <!-- Left orange box: THE ADVENTURE BEGINS -->
+            <div class="process-orange-box">
+                <p class="orange-box-text">THE <br>ADVENTURE <br>BEGINS</p>
+            </div>
+
+            <!-- Center: Simple Machines image with green overlay - CLICKABLE -->
+            <a href="simple_machines/sm1.html" class="process-adventure-card" aria-label="How Does It Work? Simple Machines Adventure">
+                <img 
+                    src="images/introduction/process_simplemachines_hr500px.jpg" 
+                    alt="Simple machines including gears, levers, and pulleys used at the iron works."
+                    class="adventure-image"
+                >
+                <div class="adventure-overlay" aria-hidden="true">
+                    <p class="adventure-title">How Does It Work?</p>
+                    <p class="adventure-subtitle">simple machines</p>
+                </div>
+            </a>
+
+            <!-- Right orange box: FORGE AHEAD / MAKE YOUR CHOICE with dropdown -->
+            <div class="process-orange-box">
+                <p class="orange-box-text forge-ahead">FORGE AHEAD</p>
+                <p class="orange-box-text make-choice">MAKE YOUR <br>CHOICE</p>
+            </div>
+        </div>
+        <!-- Bottom row: Two adventures side by side -->
+        <div class="process-bottom-row">
+            <!-- Rocks and Minerals - CLICKABLE -->
+            <a href="rockandminerals/rocks1.html" class="process-adventure-card" aria-label="Dig It! Rocks and Minerals Adventure">
+                <img 
+                    src="images/introduction/process_digit_hr500px.jpg" 
+                    alt="Rocks and minerals were gathered from Saugus watershed."
+                    class="adventure-image"
+                >
+                <div class="adventure-overlay" aria-hidden="true">
+                    <p class="adventure-title">Dig It!</p>
+                    <p class="adventure-subtitle">explore rocks and minerals</p>
+                </div>
+            </a>
+            <!-- Colonial Life - CLICKABLE -->
+            <a href="colonial_life/cl1.html" class="process-adventure-card" aria-label="Travel The Time Warp! Colonial America Adventure">
+                <img 
+                    src="images/introduction/process_coloniallife_hr500px.jpg" 
+                    alt="Colonial era iron masters house from the 1600s."
+                    class="adventure-image"
+                >
+                <div class="adventure-overlay" aria-hidden="true">
+                    <p class="adventure-title">Travel The Time Warp</p>
+                    <p class="adventure-subtitle">life in Colonial America</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Back navigation -->
+        <nav class="navigation" aria-label="Navigation">
+            <a href="colonial_pp1_postcard.html" class="nav-button back" aria-label="Go back to postcard assignment">
+                <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                    <path 
+                        d="M 28 10 L 12 20 L 28 30" 
+                        fill="none" 
+                        stroke="#FFFFFF" 
+                        stroke-width="4" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"
+                    />
+                </svg>
+                <span class="sr-only">Back</span>
+            </a>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            Choose your adventure to explore different aspects of the Saugus Iron Works: 
+            the science of simple machines, the geology of iron-making materials, 
+            or the daily life of colonial ironworkers.
+        </p>
+    </footer>
+</body>
+</html>

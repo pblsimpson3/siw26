@@ -1552,6 +1552,167 @@ audio:focus {
 }
 
 /* ========================================
+   PROCESS.HTML - CHOOSE YOUR ADVENTURE
+   Triangle Layout: SM at top, two cards at bottom
+   ======================================== */
+
+/* Container for entire process page */
+main {
+    max-width: 815px;
+    margin: 0 auto;
+}
+
+/* Top row: Orange boxes flank SM card with no gaps */
+.process-top-row {
+    display: grid;
+    grid-template-columns: 207.5px 400px 207.5px; /* Total: 815px */
+    gap: 0; /* No gaps between elements */
+    align-items: stretch;
+    margin-bottom: 20px; /* 20px gap to bottom row */
+}
+
+/* Orange text boxes - equal widths */
+.process-orange-box {
+    background-color: #FF6633;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%; /* Match height of SM card */
+}
+
+.orange-box-text {
+    color: #000099;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap; /* Keeps FORGE AHEAD on one line */
+}
+
+/* Specific spacing for FORGE AHEAD and MAKE YOUR CHOICE */
+.orange-box-text.forge-ahead {
+    margin-bottom: 0;
+}
+
+.orange-box-text.make-choice {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Adventure card with image and overlay - clickable */
+.process-adventure-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    outline-offset: 4px;
+}
+
+.process-adventure-card:focus {
+    outline: 3px solid #FFD700;
+}
+
+.process-adventure-card:focus .adventure-overlay {
+    outline: 2px solid #FFFFFF;
+    outline-offset: -2px;
+}
+
+/* All adventure card images - exactly 400px wide */
+.adventure-image {
+    width: 400px;
+    height: auto;
+    display: block;
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Green overlay box at top of image */
+.adventure-overlay {
+    position: absolute;
+    top: 10px; /* 10px from top to show image above */
+    left: 40px; /* 40px from left edge */
+    right: 40px; /* 40px from right edge */
+    width: calc(100% - 80px); /* Total width minus 80px (40px each side) */
+    height: 40px;
+    background-color: rgba(0, 204, 0, 0.80); /* Green overlay 80% opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-top: 2px solid #006600;
+    border-bottom: 2px solid #006600;
+    border-left: 2px solid #006600; /* Add left border for definition */
+    border-right: 2px solid #006600; /* Add right border for definition */
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+}
+
+.adventure-title {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.adventure-subtitle {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Hover effects */
+.process-adventure-card:hover {
+    transform: translateY(-5px);
+}
+
+.process-adventure-card:hover .adventure-image {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: #00CC00;
+}
+
+.process-adventure-card:hover .adventure-overlay {
+    background-color: rgba(0, 255, 0, 0.98);
+    border-bottom-color: #00FF00;
+}
+
+/* Active/pressed state */
+.process-adventure-card:active {
+    transform: translateY(-2px);
+}
+
+.process-adventure-card:active .adventure-overlay {
+    background-color: rgba(0, 180, 0, 0.98);
+}
+
+/* Bottom row: Two adventure cards side by side */
+.process-bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* 15px between the two cards */
+    margin-bottom: 40px;
+}
+
+/* Ensure bottom row cards are also 400px */
+.process-bottom-row .process-adventure-card {
+    width: 400px;
+    flex-shrink: 0; /* Don't shrink below 400px */
+}
+
+/* ========================================
    CSS-BASED NAVIGATION ARROWS
    ======================================== */
 
@@ -1910,17 +2071,110 @@ audio:focus {
 }
 
 /* ========================================
-   PRINT STYLES
+   PROCESS PAGE RESPONSIVE DESIGN
    ======================================== */
 
-@media print {
-    .navigation {
-        display: none;
+@media (max-width: 850px) {
+    main {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Reduce all elements proportionally */
+    .process-top-row {
+        grid-template-columns: 1fr 350px 1fr;
     }
     
-    body {
-        max-width: 100%;
-        padding: 0;
+    .adventure-image {
+        width: 350px;
+    }
+    
+    .process-bottom-row .process-adventure-card {
+        width: 350px;
+    }
+    
+    .orange-box-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    /* Stack top row vertically */
+    .process-top-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .process-orange-box {
+        min-height: 100px;
+    }
+    
+    /* Center single adventure card */
+    .process-adventure-card {
+        margin: 0 auto;
+    }
+    
+    /* Stack bottom row vertically */
+    .process-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .adventure-image {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .process-bottom-row .process-adventure-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .orange-box-text {
+        font-size: 18px;
+        white-space: normal;
+    }
+    
+    .adventure-title {
+        font-size: 16px;
+    }
+    
+    .adventure-subtitle {
+        font-size: 12px;
+    }
+    
+    .adventure-overlay {
+        height: 35px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .adventure-overlay {
+        background-color: rgba(0, 204, 0, 1); /* Solid green */
+        border: 2px solid #FFFFFF;
+    }
+    
+    .process-adventure-card:focus .adventure-overlay {
+        outline: 3px solid #FFFF00;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .process-adventure-card {
+        transition: none;
+    }
+    
+    .process-adventure-card:hover {
+        transform: none;
     }
 }
 
@@ -1936,5 +2190,18 @@ audio:focus {
     body {
         max-width: 100%;
         padding: 0;
+    }
+}
+
+
+/* Print styles */
+@media print {
+    .process-adventure-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .adventure-overlay {
+        background-color: rgba(0, 204, 0, 1);
     }
 }
