@@ -75,7 +75,7 @@ img {
 }
 
 /* ========================================
-   INTRO_2 SPECIFIC STYLES
+   INTRO PAGE 3 > INTRO_2 SPECIFIC STYLES
    ======================================== */
 
 /* Horizontal image row */
@@ -128,7 +128,7 @@ img {
 .color-direction { color: #FF6600; }
 
 /* ========================================
-   INTRO_3 SPECIFIC STYLES
+   INTRO PAGE 4 > INTRO_3 SPECIFIC STYLES
    ======================================== */
 
 /* Upper Half: Two Column Layout */
@@ -207,7 +207,7 @@ img {
 }
 
 /* ========================================
-   TASK1_STAMPS SPECIFIC STYLES
+   INTRO PAGE 5 >TASK1_STAMPS SPECIFIC STYLES
    ======================================== */
 
 /* Two Column Layout: 70% / 30% */
@@ -305,7 +305,7 @@ img {
 }
 
 /* ========================================
-   TASK2_PORTFOLIO SPECIFIC STYLES
+   INTRO PAGE 6 > TASK2_PORTFOLIO SPECIFIC STYLES
    ======================================== */
 
 /* Top Section: Ranger Ron with Instructions */
@@ -377,7 +377,7 @@ img {
 }
 
 /* ========================================
-   QUICKFACTS1 SPECIFIC STYLES
+   INTRO PAGE 7 > QUICKFACTS1 SPECIFIC STYLES
    ======================================== */
 
 /* Top Section: Text/Ranger Ron aligned with Mill Image */
@@ -429,7 +429,7 @@ img {
 }
 
 /* ========================================
-   QUICKFACTS2 SPECIFIC STYLES
+   INTRO PAGE 8 > QUICKFACTS2 SPECIFIC STYLES
    Cloud-to-Oval Interactive Reveal
    ======================================== */
 
@@ -659,7 +659,7 @@ body:has(.cloud-grid) {
 }
 
 /* ========================================
-   TASK_BRIEFSUMMARY SPECIFIC STYLES
+   INTRO PAGE 9 > TASK_BRIEFSUMMARY SPECIFIC STYLES
    ======================================== */
 
 /* Top Section: Portfolio Icon and Text */
@@ -762,9 +762,9 @@ body:has(.cloud-grid) {
     margin: 0;
 }
 
-/* ========================================
-   HISTORY ESSAY PAGES SPECIFIC STYLES
-   ======================================== */
+/* ====================================================
+   INTRO PAGE 9A > HISTORY ESSAY PAGES SPECIFIC STYLES
+   ==================================================== */
 
 /* Essay Header */
 .essay-header {
@@ -839,7 +839,7 @@ body:has(.cloud-grid) {
 }
 
 /* ========================================
-   INTRO_4MEETSAMLIZ SPECIFIC STYLES
+   INTRO PAGE 10 > INTRO_4MEETSAMLIZ SPECIFIC STYLES
    ======================================== */
 
 /* Top Section: Ranger Ron Left + Text */
@@ -912,7 +912,7 @@ body:has(.cloud-grid) {
 }
 
 /* ========================================
-   THELETTER SPECIFIC STYLES
+   INTRO PAGE 11 > THELETTER SPECIFIC STYLES
    ======================================== */
 
 /* Header Section */
@@ -1034,9 +1034,9 @@ audio:focus {
     margin: 30px 0;
 }
 
-/* ========================================
-   TIMEWARP_TOIRONWORKS SPECIFIC STYLES
-   ======================================== */
+/* =====================================================
+   INTRO PAGE 12 > TIMEWARP_TOIRONWORKS SPECIFIC STYLES
+   ==================================================== */
 
 /* Top Section: 3 Column Layout */
 .timewarp-top {
@@ -1130,9 +1130,9 @@ audio:focus {
     margin: 30px 0;
 }
 
-/* ========================================
-   IRONMAKINGDIAGRAM SPECIFIC STYLES
-   ======================================== */
+/* ==================================================
+   INTRO PAGE 13 > IRONMAKINGDIAGRAM SPECIFIC STYLES
+   ================================================== */
 
 /* Page Title */
 .iron-diagram-title {
@@ -1337,9 +1337,9 @@ audio:focus {
     margin: 0;
 }
 
-/* ========================================
-   COLONIAL_PP1_POSTCARD SPECIFIC STYLES
-   ======================================== */
+/* ======================================================
+   INTRO PAGE 14 > COLONIAL_PP1_POSTCARD SPECIFIC STYLES
+   ====================================================== */
 
 /* Page Header */
 .postcard-header {
@@ -1467,9 +1467,9 @@ audio:focus {
     padding: 5px;
 }
 
-/* ========================================
-   SIW_POSTCARDS PAGE SPECIFIC STYLES
-   ======================================== */
+/* ====================================================
+   INTRO PAGE 14A > SIW_POSTCARDS PAGE SPECIFIC STYLES
+   ==================================================== */
 
 /* Page Title */
 .postcards-title {
@@ -1566,10 +1566,10 @@ audio:focus {
     width: 200px;
 }
 
-/* ========================================
-   PROCESS.HTML - CHOOSE YOUR ADVENTURE
+/* =====================================================
+   INTRO PAGE 15 > PROCESS.HTML - CHOOSE YOUR ADVENTURE
    Triangle Layout: SM at top, two cards at bottom
-   ======================================== */
+   ==================================================== */
 
 /* Container for entire process page */
 main {
@@ -1725,6 +1725,259 @@ main {
 .process-bottom-row .process-adventure-card {
     width: 400px;
     flex-shrink: 0; /* Don't shrink below 400px */
+}
+
+/* ========================================
+   TEACHER PAGE 2 > WORKSHEET MATRIX PAGE STYLES
+   ======================================== */
+
+.worksheet-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.worksheet-header h1 {
+    color: #003366;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.worksheet-intro {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Worksheet table */
+.worksheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.worksheet-cell {
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #CCCCCC;
+}
+
+.worksheet-cell-wide {
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #CCCCCC;
+}
+
+.worksheet-section-header {
+    background-color: #003366;
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+
+.worksheet-section-header h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.worksheet-label {
+    color: #003366;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+/* Worksheet thumbnail links */
+.worksheet-link {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.worksheet-link:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 3px;
+}
+
+.worksheet-thumb {
+    max-width: 200px;
+    height: auto;
+    border: 2px solid #666;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.worksheet-link:hover .worksheet-thumb {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: #003366;
+}
+
+/* Checklist HTML/PDF links */
+.checklist-links {
+    margin-top: 10px;
+}
+
+.checklist-html-link,
+.checklist-pdf-link {
+    color: #0000FF;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: background-color 0.2s ease;
+}
+
+.checklist-html-link:hover,
+.checklist-pdf-link:hover {
+    background-color: #FFFF99;
+}
+
+.checklist-html-link:focus,
+.checklist-pdf-link:focus {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+.link-separator {
+    margin: 0 10px;
+    color: #666;
+}
+
+/* =========================================================
+   TEACHER PAGE 2A > CHECKLIST PAGE STYLES (Print-Friendly)
+   ========================================================= */
+
+.checklist-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.checklist-header {
+    margin-bottom: 30px;
+}
+
+.checklist-header h1 {
+    color: #003366;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.checklist-header h2 {
+    color: #003366;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Checklist table */
+.checklist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.checklist-table tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.checklist-table tr:last-child {
+    border-bottom: none;
+}
+
+/* Checkbox column */
+.checkbox-cell {
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px 10px;
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: #003366;
+}
+
+.task-checkbox:focus {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Stamp cell (no checkbox) */
+.stamp-cell {
+    padding: 10px;
+}
+
+.stamp-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.stamp-link:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.passport-stamp {
+    width: 49px;
+    height: 45px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.stamp-link:hover .passport-stamp {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.stamp-link:focus .passport-stamp {
+    transform: scale(1.15);
+}
+
+/* Task number column */
+.task-number {
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366;
+    padding: 15px 10px;
+}
+
+/* Task description column */
+.task-description {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    padding: 15px 20px;
+}
+
+/* Checklist footer */
+.checklist-footer {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #F0F8FF;
+    border: 2px solid #003366;
+    text-align: center;
+}
+
+.checklist-footer p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+    margin: 0;
 }
 
 /* ========================================
@@ -2083,6 +2336,45 @@ main {
     .maps-row {
         flex-direction: column;
     }
+
+    .worksheet-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .worksheet-thumb {
+        max-width: 150px;
+    }
+    
+    .worksheet-label {
+        font-size: 16px;
+    }
+    
+    .task-description {
+        font-size: 14px;
+    }
+
+/* ========================================
+   TEACHER PAGES RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 500px) {
+    .worksheet-cell {
+        display: block;
+        width: 100%;
+    }
+    
+    .worksheet-thumb {
+        max-width: 200px;
+    }
+    
+    .checklist-table {
+        font-size: 14px;
+    }
+    
+    .task-number {
+        font-size: 18px;
+    }
+
 }
 
 /* ========================================
@@ -2215,6 +2507,44 @@ main {
         break-inside: avoid;
         page-break-inside: avoid;
     }
+
+/* ========================================
+   PRINT STYLES FOR CHECKLIST
+   ======================================== */
+
+@media print {
+    .checklist-page {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .navigation {
+        display: none;
+    }
+    
+    .checklist-table tr {
+        page-break-inside: avoid;
+    }
+    
+    .task-checkbox {
+        border: 2px solid #000;
+        width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #FFFFFF;
+    }
+    
+    .stamp-link {
+        pointer-events: none;
+    }
+    
+    .checklist-footer {
+        background-color: #FFFFFF;
+        border: 2px solid #000;
+    }
+}
     
     .adventure-overlay {
         background-color: rgba(0, 204, 0, 1);
