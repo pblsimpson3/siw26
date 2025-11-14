@@ -1727,9 +1727,9 @@ main {
     flex-shrink: 0; /* Don't shrink below 400px */
 }
 
-/* ========================================
+/* ===============================================
    TEACHER PAGE 2 > WORKSHEET MATRIX PAGE STYLES
-   ======================================== */
+   =============================================== */
 
 .worksheet-header {
     text-align: center;
@@ -1900,16 +1900,47 @@ main {
     padding: 15px 10px;
 }
 
+/* Hide default checkbox, create custom one */
 .task-checkbox {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    accent-color: #003366;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.task-checkbox:focus {
+/* Custom checkbox visual */
+.checkbox-visual {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #003366;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-visual:hover {
+    border-color: #0066CC;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+/* Focus state */
+.task-checkbox:focus + .checkbox-visual {
     outline: 2px solid #FFD700;
     outline-offset: 2px;
+}
+
+/* Checked state - show checkmark */
+.task-checkbox:checked + .checkbox-visual::after {
+    content: '✓';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366;
 }
 
 /* Stamp cell (no checkbox) */
@@ -2459,6 +2490,44 @@ main {
 }
 
 /* ========================================
+   RESPONSIVE DESIGN FOR CHECKLIST
+   ======================================== */
+
+@media (max-width: 800px) {
+    .checklist-table {
+        font-size: 14px;
+    }
+    
+    .task-number {
+        font-size: 18px;
+    }
+    
+    .task-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .checkbox-visual {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .task-checkbox:checked + .checkbox-visual::after {
+        font-size: 16px;
+    }
+    
+    .task-number {
+        width: 40px;
+        font-size: 16px;
+    }
+    
+    .task-description {
+        font-size: 13px;
+    }
+}
+
+/* ========================================
    ACCESSIBILITY ENHANCEMENTS
    ======================================== */
 
@@ -2508,45 +2577,80 @@ main {
         page-break-inside: avoid;
     }
 
+
 /* ========================================
    PRINT STYLES FOR CHECKLIST
    ======================================== */
 
 @media print {
+    /* Remove page margins and navigation */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
     .checklist-page {
         max-width: 100%;
-        padding: 0;
+        padding: 20px;
     }
     
     .navigation {
         display: none;
     }
     
+    /* Prevent page breaks inside rows */
     .checklist-table tr {
         page-break-inside: avoid;
+        break-inside: avoid;
     }
     
-    .task-checkbox {
+    /* Make custom checkbox print-friendly */
+    .checkbox-visual {
         border: 2px solid #000;
-        width: 20px;
-        height: 20px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
         background-color: #FFFFFF;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    /* Ensure checkmark prints in black */
+    .task-checkbox:checked + .checkbox-visual::after {
+        color: #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    /* Ensure stamp image prints */
+    .passport-stamp {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
     }
     
     .stamp-link {
         pointer-events: none;
     }
     
+    /* Simplify footer for printing */
     .checklist-footer {
         background-color: #FFFFFF;
         border: 2px solid #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
     }
-}
     
-    .adventure-overlay {
-        background-color: rgba(0, 204, 0, 1);
+    /* Ensure all colors print */
+    .checklist-header h1,
+    .checklist-header h2,
+    .task-number,
+    .checklist-footer p {
+        color: #000;
+    }
+    
+    /* Ensure borders print */
+    .checklist-table tr {
+        border-bottom: 1px solid #000;
     }
 }
