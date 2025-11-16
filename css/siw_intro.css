@@ -658,9 +658,9 @@ body:has(.cloud-grid) {
     }
 }
 
-/* ========================================
+/* =================================================
    INTRO PAGE 9 > TASK_BRIEFSUMMARY SPECIFIC STYLES
-   ======================================== */
+   ================================================ */
 
 /* Top Section: Portfolio Icon and Text */
 .summary-header {
@@ -838,9 +838,9 @@ body:has(.cloud-grid) {
     margin-bottom: 1.5em;
 }
 
-/* ========================================
+/* ==================================================
    INTRO PAGE 10 > INTRO_4MEETSAMLIZ SPECIFIC STYLES
-   ======================================== */
+   ================================================== */
 
 /* Top Section: Ranger Ron Left + Text */
 .meet-top-section {
@@ -2270,6 +2270,218 @@ main {
     line-height: 1.4;
     margin: 0;
     text-align: center;
+}
+
+/* ========================================
+   COLONIAL LIFE CL2.HTML STYLES
+   ======================================== */
+
+/* Top section: 3 columns with vertically centered content */
+.cl2-top-section {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    gap: 10px;
+    align-items: center; /* Vertically center all columns */
+    margin-bottom: 40px;
+}
+
+/* Column 1: Ranger Ron + Right-aligned text */
+.cl2-column-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding-right: 5px;
+}
+
+.cl2-ranger-image {
+    display: block;
+}
+
+.cl2-text-right {
+    color: #000099;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+    line-height: 1.3;
+    max-width: 250px;
+}
+
+/* Column 2: Main photo */
+.cl2-column-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cl2-main-image {
+    display: block;
+    border: 3px solid #666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Column 3: Ranger Ron face + Left-aligned text */
+.cl2-column-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+.cl2-ranger-face {
+    display: block;
+}
+
+.cl2-text-left {
+    color: #000099;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    line-height: 1.3;
+    max-width: 250px;
+}
+
+/* Bottom section: 4 Fact Clouds - FIXED */
+.cl2-fact-clouds {
+    display: grid;
+    grid-template-columns: repeat(4, 243px); /* Fixed width columns to match cloud size */
+    gap: 0px; /* Reduced gap */
+    margin-bottom: 40px;
+    justify-content: center; /* Center the entire grid */
+    max-width: 1000px; /* Prevent overflow */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cl2-fact-item {
+    display: flex;
+    justify-content: center;
+}
+
+/* Fact cloud container - LARGER SIZE */
+.cl2-fact-cloud {
+    position: relative;
+    width: 243px;  /* 25% larger than 194px */
+    height: 156px; /* 25% larger than 125px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cloud SVG - FILLS CONTAINER */
+.fact-cloud-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fact text - SLIGHTLY LARGER */
+.fact-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px; /* Increased from 18px */
+    padding: 5px;
+    color: #000000;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    display: inline-block;
+    width: 70%;
+}
+
+/* Cloud colors */
+.fact-aquamarine svg path {
+    fill: #7FFFD4 !important; /* Aquamarine */
+}
+
+.fact-lightpurple svg path {
+    fill: #DDA0DD !important; /* Light purple (Plum) */
+}
+
+.fact-lightgreen svg path {
+    fill: #90EE90 !important; /* Light green */
+}
+
+.fact-lightorange svg path {
+    fill: #FFB347 !important; /* Light orange */
+}
+
+/* ========================================
+   CL2 RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1000px) {
+    .cl2-top-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cl2-column-1,
+    .cl2-column-3 {
+        align-items: center;
+        padding: 0;
+    }
+
+    .cl2-text-right,
+    .cl2-text-left {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cl2-main-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .cl2-fact-clouds {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .cl2-text-right,
+    .cl2-text-left {
+        font-size: 22px;
+    }
+
+    .fact-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cl2-fact-clouds {
+        grid-template-columns: 1fr;
+    }
+
+    .cl2-text-right,
+    .cl2-text-left {
+        font-size: 18px;
+    }
+
+    .fact-text {
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .cl2-fact-cloud {
+        page-break-inside: avoid;
+    }
 }
 
 /* ========================================
