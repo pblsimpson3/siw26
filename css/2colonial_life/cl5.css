@@ -1,0 +1,140 @@
+/* ========================================
+   CL5.HTM STYLES
+   These styles ONLY apply to cl5.html
+   ======================================== */
+
+/* --- General Section Layout --- */
+.cl5-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.cl5-text-content {
+    flex: 1; /* Allows text to take up remaining space */
+}
+.cl5-text-content p {
+    color: #000066;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.6;
+}
+.cl5-text-content a {
+    color: #000066;
+    font-weight: bold;
+}
+.cl5-text-content a:hover {
+    text-decoration: underline;
+}
+
+.cl5-avatar {
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.cl5-section-image {
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* --- Section 1: Top Section --- */
+.cl5-whirligig-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-weight: bold;
+    color: #000066;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+.cl5-whirligig-link:hover,
+.cl5-whirligig-link:focus {
+    background-color: #f0f0f0;
+    outline: 2px solid #000066;
+}
+.cl5-whirligig-link img {
+    border-radius: 8px;
+}
+.cl5-whirligig-link span {
+    margin-top: 5px;
+}
+
+/* --- Section 4: Bottom Grid --- */
+.cl5-bottom-grid {
+    display: grid;
+    /* Create 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0; /* No gap as requested */
+    border-radius: 8px; /* Rounded corners for the whole container */
+    overflow: hidden; /* This makes the corner rounding work */
+    margin-top: 20px;
+    border: 1px solid #DDD; /* A light border for definition */
+}
+
+.cl5-grid-box {
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 0.95em;
+    font-weight: bold;
+    line-height: 1.5;
+    /* Minimum height to keep boxes somewhat uniform */
+    min-height: 120px; 
+    /* Center content vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The 4 rectangle colors from the original CL5.htm */
+.cl5-box-1 {
+    background-color: #59A7F6; /* light blue */
+    color: #333;
+}
+.cl5-box-2 {
+    background-color: #CCFFCC; /* light green */
+    color: #333;
+}
+.cl5-box-3 {
+    background-color: #FFCC99; /* light orange */
+    color: #333;
+}
+.cl5-box-4 {
+    background-color: #EF5A98; /* violet */
+    color: #333;
+}
+
+
+/* ========================================
+   CL5.HTM - RESPONSIVE STYLES
+   ======================================== */
+@media (max-width: 768px) {
+    /* Stack all flexible sections */
+    .cl5-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* On stacked layout, reverse order for section 3 
+       to put the image *before* the text */
+    .cl5-middle-section-b {
+        flex-direction: column-reverse;
+    }
+
+    /* Change grid to 2x2 */
+    .cl5-bottom-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Change grid to 1x4 */
+    .cl5-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
