@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Step back in time to visit a colonial house in Plymouth Colony.">
+    <title>Colonial Life - Time Warp</title>
+    
+    <!-- 
+      UPDATED LINKS: 
+      1. Link to the new global.css file
+      2. Link to the new page-specific cl4.css file
+    -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/2colonial_life/cl4.css">
+    
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <main id="main-content" class="cl4-page-content">
+        <!-- Top Section: Time Machine + Text -->
+        <div class="cl4-top-section">
+            <div class="cl4-time-machine-column">
+                <img 
+                    src="../images/introduction/timemachine2crop.jpg" 
+                    alt="Time machine"
+                    width="200"
+                    height="150"
+                >
+            </div>
+            <div class="cl4-text-column">
+                <p class="cl4-intro-text">
+                    Now that you have compared your life today to life in the 1600's, we are ready to travel back to 1646 and visit Elizabeth and Samuel. They live very close to the Iron Works.
+                </p>
+            </div>
+        </div>
+
+        <!-- Middle Section: Time Warp + House + Anvil -->
+        <div class="cl4-middle-section">
+            
+            <!-- Column 1: Time Warp "L" Shape (CSS Grid) -->
+            <div class="cl4-timewarp-column">
+                <img src="../images/introduction/tmblur1.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-1">
+                <img src="../images/introduction/tmblur2.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-2">
+                <img src="../images/introduction/tmblur3.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-3">
+                <img src="../images/introduction/tmblur4.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-4">
+                <img src="../images/introduction/tmblur5.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-5">
+                <img src="../images/introduction/tmblur1.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-6">
+                <img src="../images/introduction/tmblur2.jpg" alt="Time warp blur" width="50" height="38" class="tw-img-7">
+            </div>
+            
+            <!-- Column 2: Plimoth House -->
+            <div class="cl4-house-column">
+                <img 
+                    src="../images/colonial_life/plimothhouse.jpg" 
+                    alt="A colonial house at Plimoth Patuxet Museums"
+                    width="300"
+                    height="225"
+                >
+            </div>
+            
+            <!-- Column 3: Anvil + Elizabeth -->
+            <div class="cl4-anvil-column">
+                <a href="spider_dinner.html" class="cl4-anvil-link">
+                    <img 
+                        src="../images/introduction/anvil2.gif" 
+                        alt="Anvil icon"
+                        width="75"
+                        height="75"
+                    >
+                    <span>dinner</span>
+                </a>
+                <div class="cl4-elizabeth-image">
+                    <img 
+                        src="../images/introduction/colonial_liz_crop.jpg" 
+                        alt="Elizabeth, a colonial girl"
+                        width="75"
+                        height="75"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: External Link -->
+        <div class="cl4-bottom-container">
+            <div class="cl4-bottom-section">
+                <a 
+                    href="https://plimoth.org/for-students/homework-help" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="cl4-bottom-anvil-link"
+                >
+                    <img 
+                        src="../images/introduction/anvil2.gif" 
+                        alt="Anvil icon"
+                        width="75"
+                        height="75"
+                    >
+                </a>
+                <div class="cl4-bottom-text-column">
+                    <p>
+                        Welcome to our house. We have been waiting for you. Would you like to join us for dinner? Be careful, the kettle of fish stew is very hot! I helped Mother make spider cornbread. <br>
+                        Click on the anvil to visit Plimoth Patuxet Museums.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation" aria-label="Navigation">
+            <a href="cl3.html" class="nav-button back" aria-label="Back to previous page">
+                <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                    <path 
+                        d="M 28 10 L 12 20 L 28 30" 
+                        fill="none" 
+                        stroke="#FFFFFF" 
+                        stroke-width="4" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"
+                    />
+                </svg>
+                <span class="sr-only">Back</span>
+            </a>
+            <a href="cl5.html" class="nav-button forward" aria-label="Continue to next page">
+                <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                    <path 
+                        d="M 12 10 L 28 20 L 12 30" 
+                        fill="none" 
+                        stroke="#FFFFFF" 
+                        stroke-width="4" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"
+                    />
+                </svg>
+                <span class="sr-only">Next</span>
+            </a>
+        </nav>
+    </main>
+</body>
+</html>
