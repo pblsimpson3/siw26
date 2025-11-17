@@ -1,0 +1,176 @@
+/* ========================================
+   SAUGUS IRON WORKS - GLOBAL STYLES
+   These styles apply to ALL pages.
+   ======================================== */
+
+/* --- CSS Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Global Body & Typography --- */
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    /* This max-width creates the main site container */
+    max-width: 840px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #000066;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h2 {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+h3 {
+    color: #000066;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* ========================================
+   CSS-BASED NAVIGATION ARROWS
+   ======================================== */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+    align-items: center;
+}
+
+/* Navigation Button Base - Replicate original arrow appearance */
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Arrow SVG Container */
+.nav-button svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Back Arrow - Blue gradient background */
+.nav-button.back {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Forward Arrow - Blue gradient background */
+.nav-button.forward {
+    background: linear-gradient(-135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover State - Brightens and slightly enlarges */
+.nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Active/Click State */
+.nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95);
+}
+
+/* Focus State for Keyboard Navigation */
+.nav-button:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Arrow Paths - White color to contrast with blue background */
+.nav-button path {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Accessibility - Screen Reader Text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   GLOBAL RESPONSIVE STYLES
+   ======================================== */
+@media (max-width: 860px) {
+    /* On small screens, let the body be full-width 
+       and add a little padding */
+    body {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+
+/* ========================================
+   GLOBAL PRINT STYLES
+   ======================================== */
+@media print {
+    body {
+        max-width: 100%;
+        padding: 0;
+        color: #000;
+        background-color: #fff;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    h1, h2, h3 {
+        color: #000;
+        page-break-after: avoid;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* Hide non-essential elements */
+    .navigation {
+        display: none;
+    }
+    
+    /* You can add other global print rules here */
+}

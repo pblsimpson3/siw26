@@ -1,0 +1,106 @@
+/* ==============================================
+   SPIDER_DINNER.HTML STYLES - GeminiPro debugged
+   ============================================== */
+
+/* Your existing class, now used as the main font/bg wrapper */
+.spider-content {
+    font-family: serif; 
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+/* Your existing class, used for the 800px container */
+.spider-container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* This selector will NOW WORK because the .spider-header class
+  is correctly applied in the HTML.
+*/
+.spider-header h1 {
+    text-align: center;
+    font-size: 1.3em; /* 1.8em from original image might be better */
+    margin-bottom: 20px;
+}
+
+/* This selector will ALSO NOW WORK */
+.spider-header h2 {
+    font-size: 1.2em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.spider-intro-section {
+    margin-bottom: 30px;
+    column-count: 2;
+    column-gap: 30px;
+    text-align: justify;
+}
+
+/* NEW LAYOUT CSS: This replaces your .spider-content-columns
+*/
+.spider-main-layout {
+    display: flex;
+    justify-content: space-between;
+    /* This gap creates the space from the original image */
+    gap: 40px; 
+}
+
+/* New columns */
+.spider-left-column, .spider-right-column {
+    flex: 1; /* Each column takes up equal space */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+}
+
+/* Your old .left-column / .right-column CSS is no longer needed */
+
+.recipe-block {
+    margin-bottom: 30px; /* Spacing between recipe blocks */
+}
+
+.origin-text {
+    margin-bottom: 15px; /* Space below the origin paragraph */
+}
+
+.ingredients {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Space between ingredients and instructions */
+}
+
+.ingredients-column {
+    flex: 1;
+}
+
+.ingredients-column p {
+    margin: 0; 
+}
+
+.instructions {
+    margin-top: 15px;
+}
+
+/* Image styling */
+.pan-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px; /* Space below pan */
+    display: block;
+}
+
+.berries-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
