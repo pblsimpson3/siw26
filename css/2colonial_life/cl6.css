@@ -1,0 +1,286 @@
+/* ========================================
+   CL6 PAGE SPECIFIC STYLES (V2)
+   ======================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION 1 --- */
+.top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Top Left Column */
+.top-section .col-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section .col-1 p {
+    font-size: 1.2rem;
+    color: #000066;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Container for Blacksmith + Girl to handle alignment */
+.blacksmith-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Standard left alignment for the blacksmith */
+    width: fit-content;
+}
+
+/* The Girl image aligned to the bottom-right side of the blacksmith area */
+.girl-standing-img {
+    align-self: flex-end; /* Pushes the girl to the right side of this container */
+    margin-top: -20px; /* Optional: slight overlap to tighten the visual link */
+}
+
+/* Top Right Column */
+.top-section .col-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right align content within this column */
+    margin-top: 150px; /* The requested offset */
+}
+
+.boy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align boy face and text to the right */
+    text-align: right;
+    max-width: 328px; /* Match hammer width for clean stacking */
+}
+
+.boy-text {
+    font-size: 1.2rem;
+    color: #000066;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- MIDDLE SECTION 2 --- */
+.middle-section {
+    display: flex;
+    width: 500px;
+    margin: 40px auto; /* Centered container */
+    gap: 10px;
+}
+
+/* Middle Left Column */
+.middle-section .mid-col-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Text aligns to top edge of dock image by default via flex behavior */
+}
+
+.middle-section .mid-col-1 p {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #000066;
+    font-weight: bold;
+}
+
+.middle-section .mid-col-1 img {
+    align-self: flex-end; /* Right aligned under text block */
+}
+
+/* Middle Right Column */
+.middle-section .mid-col-2 {
+    flex: 1;
+}
+
+/* --- SECTION 3: REUSED / EXISTING STYLES (Time Warp etc) --- */
+.time-warp-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.time-warp-title {
+    background-color: #CCCCFF;
+    color: #660099;
+    padding: 10px;
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.warp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* --- Section 4: Welcome Home --- */
+.welcome-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.welcome-section p {
+    color: #000066;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.welcome-section img {
+    margin: 20px auto;
+}
+
+/* --- Section 4: Passport Assignment --- */
+.cl6-middle-section {
+    margin-bottom: 40px;
+}
+
+.cl6-passport-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.cl6-passport-icon {
+    flex-shrink: 0;
+}
+
+.cl6-assignment-text {
+    flex: 1;
+}
+
+.cl6-passport-assignment {
+    color: #990099;
+}
+
+.cl6-assignment-title {
+    color: #000066;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.cl6-assignment-subtitle {
+    color: #000066;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Bottom section: Stamp box + Anvil link */
+.cl6-bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.cl6-stamp-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cl6-anvil-column {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Passport Stamp Box */
+.cl6-passport-stamp-box {
+    background-color: #FFF9E6;
+    border: 2px solid #CC0033;
+    padding: 15px; /* Increased padding slightly */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* WIDEN THE BOX HERE */
+    width: 100%;        /* Takes up full space of its column */
+    max-width: 350px;   /* Prevents it from getting too huge on big screens */
+    min-width: 280px;   /* Ensures it's wide enough for two icons */
+}
+
+/* New class to handle side-by-side icons */
+.cl6-stamp-row {
+    display: flex;
+    flex-direction: row; /* Forces items side-by-side */
+    gap: 20px;           /* Adds space between the two icons */
+    align-items: center; /* Aligns them vertically if sizes differ */
+    margin-top: 10px;    /* Adds space between text and icons */
+}
+
+.cl6-stamp-reminder-text {
+    color: #CC0033;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0 0 10px 0;
+}
+
+.cl6-anvil-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cl6-anvil-link:hover {
+    transform: scale(1.1);
+}
+
+.cl6-anvil-link:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 3px;
+}
+
+.cl6-directions-text {
+    color: #000066;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .top-section, .middle-section {
+        flex-direction: column;
+        width: 100%;
+    }
+    .top-section .col-2 {
+        margin-top: 20px;
+        align-items: center;
+    }
+    .boy-container {
+        align-items: center;
+        text-align: center;
+    }
+    .girl-standing-img {
+        align-self: center;
+    }
+    .cl6-bottom-section {
+        grid-template-columns: 1fr; /* Stack into 1 column */
+        gap: 30px;
+        text-align: center;
+    }
+
+    /* Center the columns content */
+    .cl6-stamp-column, 
+    .cl6-anvil-column {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
