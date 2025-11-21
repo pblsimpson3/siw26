@@ -89,6 +89,13 @@ h3 {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* Up Arrow - Blue gradient background */
+.nav-button.up {
+    background: linear-gradient(to bottom, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 /* Hover State - Brightens and slightly enlarges */
 .nav-button:hover {
     transform: scale(1.05);
