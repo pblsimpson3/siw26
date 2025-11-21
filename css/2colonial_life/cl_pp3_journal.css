@@ -1,0 +1,121 @@
+/* ========================================
+   CL_PP3_JOURNAL SPECIFIC STYLES (V2)
+   ======================================== */
+
+/* --- Typography & Header --- */
+.journal-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.journal-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* Color Spans */
+.text-navy {
+    color: #000066;
+    display: block;
+}
+
+.text-purple {
+    color: #990099;
+}
+
+.text-red {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+/* --- Main Section Layout --- */
+.journal-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically centers the columns relative to each other */
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Centered on page with bottom spacing */
+    gap: 30px; /* The requested 30px gap between columns */
+}
+
+/* --- Column 1: 15% Width, Right Aligned Image --- */
+.col-left {
+    /* flex: grow shrink basis */
+    flex: 0 0 15%; 
+    max-width: 15%;
+    
+    /* Flex settings to align content INSIDE this column */
+    display: flex;
+    justify-content: flex-end; /* Pushes image to the right edge of this column */
+    align-items: center;       
+}
+
+/* --- Column 2: 75% Width, Text Wrapping --- */
+.col-right {
+    flex: 0 0 85%;
+    max-width: 85%;
+    text-align: left;
+    box-sizing: border-box; /* Ensures padding doesn't break width calculation */
+}
+
+/* Text Styling */
+.journal-text {
+    font-size: 1.5rem; /* Large readable text */
+    font-weight: bold;
+    color: #000066;
+    line-height: 1.4;
+    margin: 0; /* Removes default margins to fit space perfectly */
+}
+
+/* Image Utilities */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Footer Navigation --- */
+.nav-footer {
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+    .text-navy {
+        display: inline; /* Keeps headline on one line on desktop */
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .journal-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .col-left, .col-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .col-left {
+        margin-bottom: 10px;
+    }
+
+    .journal-title {
+        font-size: 1.8rem;
+    }
+
+    .journal-text {
+        font-size: 1.2rem;
+    }
+}
