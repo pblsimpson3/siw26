@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saugus Iron Works Iron Masters House Postcards</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="css/printpostcard.css">
+</head>
+<body>
+    <div class="instructions" id="instructions">
+        <button class="close-btn" onclick="document.getElementById('instructions').style.display='none'">×</button>
+        <h3>Printing Instructions</h3>
+        <ol>
+            <li>Click "Print PDF" button below</li>
+            <li>Select "Print on both sides" (duplex printing)</li>
+            <li>Choose "Flip on short edge"</li>
+            <li>Print on 8.5" × 11" paper</li>
+            <li>Cut along dashed lines to create 3" × 5" postcards</li>
+        </ol>
+        <button onclick="window.print()">Print PDF</button>
+    </div>
+
+    <!-- Page 1: Fronts -->
+    <div class="page page-1">
+        <div class="postcard postcard-1">
+            <img src="images/introduction/postcards/postcard1_ironmastershouse_front.jpg" alt="Saugus Iron Works Ironmaster's House - Front View">
+        </div>
+        <div class="postcard postcard-2">
+            <img src="images/introduction/postcards/postcard1_ironmastershouse_front.jpg" alt="Saugus Iron Works Ironmaster's House - Front View">
+        </div>
+    </div>
+
+    <!-- Page 2: Backs -->
+    <div class="page page-2">
+        <div class="postcard postcard-1">
+            <div class="back-content">
+                <img src="images/introduction/postcards/postcard1_ironmastershouse_back.jpg" alt="Saugus Iron Works Ironmaster's House - Postcard Back">
+            </div>
+        </div>
+        <div class="postcard postcard-2">
+            <div class="back-content">
+                <img src="images/introduction/postcards/postcard1_ironmastershouse_back.jpg" alt="Saugus Iron Works Ironmaster's House - Postcard Back">
+            </div>
+        </div>
+    </div>
+    <!-- Navigation - Back Arrow Only -->
+        <nav class="navigation" aria-label="Page navigation">
+            <a href="siw_postcards.html" class="nav-button back" aria-label="Back to postcard assignment">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M 28 20 L 12 20 M 12 20 L 18 14 M 12 20 L 18 26"/>
+                </svg>
+                <span class="sr-only">Back to SIW Postcards</span>
+            </a>
+        </nav>
+</body>
+</html>
