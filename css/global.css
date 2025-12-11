@@ -174,9 +174,9 @@ h3 {
         color: #000;
     }
 
-    /* Hide non-essential elements */
+    /* Enable display of nav arrows */
     .navigation {
-        display: none;
+        display: always;
     }
     
     /* You can add other global print rules here */
