@@ -1,0 +1,238 @@
+/* ========================================
+   ROCKS 3 PAGE SPECIFIC STYLES
+   Path: css/3rocksandminerals/rocks3.css
+   ======================================== */
+
+/* --- Layout Utilities --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION (2 Columns) --- */
+.r3-top-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px; /* 15px padding between columns */
+    margin-bottom: 40px;
+}
+
+.r3-top-col-1 {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end; /* Right aligned image */
+}
+
+.r3-top-col-2 {
+    flex: 1;
+    text-align: right; /* Right aligned text */
+}
+
+.r3-intro-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000066;
+    line-height: 1.3;
+}
+
+/* --- MIDDLE TOP SECTION (Static Clouds) --- */
+.r3-cloud-section {
+    margin-bottom: 50px;
+}
+
+.cloud-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the whole row of clouds */
+    align-items: center;     /* Ensures they sit on the same horizontal axis */
+    gap: 15px;               /* Space between clouds */
+    flex-wrap: nowrap;       /* Forces them on one line for desktop */
+}
+
+.static-cloud {
+    position: relative;
+    /* Increased size by 25% */
+    width: 250px;  
+    height: 150px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+
+/* Base Cloud Shape via SVG */
+.static-cloud svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2)); 
+}
+
+/* Specific Cloud Colors */
+.cloud-igneous svg path { fill: orange; }
+.cloud-sedimentary svg path { fill: lightblue; }
+.cloud-metamorphic svg path { fill: #D8BFD8; /* light purple */ }
+
+/* Centered Text inside Clouds */
+.cloud-text {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #000066;
+    text-align: center;
+}
+
+/* --- MIDDLE SECTION (Passport Layout) --- */
+.r3-middle-wrapper {
+    margin-bottom: 50px;
+}
+
+/* New Assignment Header spanning both columns */
+.r3-assignment-title {
+    text-align: center;
+    font-size: 2rem; /* Matches typical CL assignment titles */
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-navy {
+    color: #000066;
+}
+
+.text-purple {
+    color: #990099;
+}
+
+/* Columns container */
+.r3-middle-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.r3-mid-col-1 {
+    flex: 0 0 25%; /* Fixed ratio mimicking cl6 layout */
+    display: flex;
+    justify-content: flex-end; /* Right align the passport image */
+}
+
+.r3-mid-col-2 {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.r3-passport-text {
+    font-size: 1.4rem;
+    color: #000066;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+/* --- LOWER MIDDLE (Help Links inside Col 2) --- */
+.r3-help-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.r3-help-text {
+    font-size: 1.4rem;
+    color: #000066;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.r3-help-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* 4 equally spaced links */
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.r3-link {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000066;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.r3-link:hover {
+    color: #660099;
+}
+
+/* --- BOTTOM SECTION (4 Stones Grid) --- */
+.r3-bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Equally spaced across full width */
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.r3-stone-item {
+    flex: 0 0 auto;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 800px) {
+    .cloud-grid {
+        flex-wrap: wrap; 
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .r3-top-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .r3-top-col-1 {
+        justify-content: center;
+    }
+
+    .r3-top-col-2 {
+        text-align: center;
+    }
+
+    .r3-middle-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .r3-mid-col-1 {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .r3-passport-text, .r3-help-text {
+        text-align: center;
+    }
+
+    .r3-help-links {
+        justify-content: space-around;
+    }
+
+    .r3-bottom-section {
+        justify-content: center;
+    }
+}
