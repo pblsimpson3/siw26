@@ -1,0 +1,179 @@
+/* ========================================
+   ROCKS 4 PAGE SPECIFIC STYLES
+   Path: css/3rocksandminerals/rocks4.css
+   ======================================== */
+
+/* --- Layout Utilities --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION (2 Columns) --- */
+.r4-top-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px; /* 10px padding between columns */
+    margin-bottom: 40px;
+}
+
+.r4-top-col-1 {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: flex-end; /* Right aligned image */
+}
+
+.r4-top-col-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Left aligned text */
+}
+
+.r4-intro-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000066;
+    line-height: 1.4;
+}
+
+/* Spacer & Backpack Ready Row */
+.r4-spacer {
+    height: 40px; /* 40px white space */
+}
+
+.r4-backpack-ready-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Left aligned */
+    gap: 15px;
+}
+
+.r4-backpack-ready-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000066;
+    line-height: 1.4;
+}
+
+/* --- MIDDLE SECTION (Help Links) --- */
+.r4-middle-section {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.r4-instruction-text {
+    font-size: 1.5rem;
+    color: #000066;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.r4-help-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* 4 equally spaced links */
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.r4-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000066;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.r4-link:hover {
+    color: #660099;
+}
+
+/* --- BOTTOM SECTION (Interactive Backpack) --- */
+.r4-bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Vertically aligned with middle section */
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.r4-reveal-label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #CC0000; /* Red text label */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Accessible Interactive Button */
+.r4-backpack-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.r4-backpack-btn:hover {
+    transform: scale(1.02);
+}
+
+.r4-backpack-btn:focus {
+    outline: 4px solid #FFD700;
+    outline-offset: 4px;
+}
+
+/* Image Swapping Logic */
+.backpack-open {
+    display: none; /* Hidden by default */
+}
+
+.r4-backpack-btn[aria-expanded="true"] .backpack-closed {
+    display: none; /* Hide closed bag when expanded */
+}
+
+.r4-backpack-btn[aria-expanded="true"] .backpack-open {
+    display: block; /* Show open bag when expanded */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .r4-top-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .r4-top-col-1 {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .r4-top-col-2 {
+        text-align: center;
+        align-items: center;
+    }
+
+    .r4-backpack-ready-row {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .r4-help-links {
+        justify-content: space-around;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocks 4 - Test Minerals</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="../css/3rocksandminerals/rocks4.css">
+</head>
+<body>
+
+    <main>
+        <!-- TOP SECTION -->
+        <section class="r4-top-section">
+            <!-- Column 1: Right Aligned Image -->
+            <div class="r4-top-col-1">
+                <img src="../images/rocksminerals/RangerRick2bigR.jpg" alt="Ranger Ron pointing" width="128" height="186">
+            </div>
+            
+            <!-- Column 2: Text Layout -->
+            <div class="r4-top-col-2">
+                <p class="r4-intro-text">
+                    Now that you know about the three types of rock and the rock cycle, let's find out about minerals. Remember, every rock is made up of more than one mineral.
+                </p>
+                
+                <!-- 40px Spacer -->
+                <div class="r4-spacer" aria-hidden="true"></div>
+                
+                <!-- Horizontally aligned text and image -->
+                <div class="r4-backpack-ready-row">
+                    <p class="r4-backpack-ready-text">
+                        Get your backpack ready.<br>
+                        (Backpack sheet again)
+                    </p>
+                    <img src="../images/rocksminerals/RangerRick2nobod.jpg" alt="Ranger Ron face icon" width="85" height="52">
+                </div>
+            </div>
+        </section>
+
+        <!-- MIDDLE SECTION -->
+        <section class="r4-middle-section">
+            <p class="r4-instruction-text">
+                Fill it with the equipment needed to TEST minerals. Get help from the links below.
+            </p>
+            <div class="r4-help-links">
+                <a href="https://youtu.be/M4rzNUZFV4w" class="r4-link" target="_blank">HELP 1</a>
+                <a href="https://kids.britannica.com/kids/article/mineral/353468" class="r4-link" target="_blank">HELP 2</a>
+                <a href="https://www.nps.gov/articles/mohs-hardness-scale.htm" class="r4-link" target="_blank">HELP 3</a>
+                <a href="https://min4kids.org/q_mineral-identification" class="r4-link" target="_blank">HELP 4</a>
+            </div>
+        </section>
+
+        <!-- BOTTOM SECTION (Accessible Interactive Reveal) -->
+        <section class="r4-bottom-section">
+            <p class="r4-reveal-label" id="backpack-label">Select backpack to reveal</p>
+            
+            <!-- Accessible Button Element -->
+            <button 
+                class="r4-backpack-btn" 
+                id="backpackBtn" 
+                aria-expanded="false" 
+                aria-labelledby="backpack-label"
+                onclick="toggleBackpack()"
+            >
+                <!-- Default Closed Image -->
+                <img 
+                    src="../images/rocksminerals/backpack.jpg" 
+                    alt="Closed Rockhound backpack" 
+                    class="backpack-closed" 
+                    width="250"
+                >
+                <!-- Revealed Open Image with descriptive ALT -->
+                <img 
+                    src="../images/rocksminerals/testminequip.jpg" 
+                    alt="Backpack contents revealed: flashlight, magnet, penny, black streak plate, white streak plate, and a nail." 
+                    class="backpack-open" 
+                    width="250"
+                >
+            </button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER NAVIGATION -->
+    <footer class="navigation" aria-label="Navigation">
+        <!-- Back to Rocks 3 -->
+        <a href="rocks3.html" class="nav-button back" aria-label="Back to Rock Cycle">
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                <path d="M 28 10 L 12 20 L 28 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="sr-only">Back</span>
+        </a>
+
+        <!-- Forward to Rocks 5 -->
+        <a href="rocks5.html" class="nav-button forward" aria-label="Next to Rocks Page 5">
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                <path d="M 12 10 L 28 20 L 12 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </a>
+    </footer>
+
+    <!-- Interactive Script for Accessibility -->
+    <script>
+        function toggleBackpack() {
+            const btn = document.getElementById('backpackBtn');
+            // Check current state
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            // Toggle to opposite state
+            btn.setAttribute('aria-expanded', !isExpanded);
+        }
+    </script>
+</body>
+</html>
