@@ -1,0 +1,194 @@
+/* ========================================
+   ROCKS 5 PAGE SPECIFIC STYLES
+   Path: css/3rocksandminerals/rocks5.css
+   ======================================== */
+
+/* --- Layout Utilities --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION (2 Columns) --- */
+.r5-top-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Column 1: Passport + Links */
+.r5-top-col-1 {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right aligns content towards the text */
+}
+
+.r5-minerals-links {
+    margin-top: 50px; /* 50px padding separates passport img */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: right;
+}
+
+.r5-min-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000066;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.r5-min-link:hover {
+    color: #660099;
+}
+
+/* Column 2: Text Content */
+.r5-top-col-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.r5-assignment-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-navy { color: #000066; }
+.text-purple { color: #990099; }
+.text-red { color: #CC0000; font-weight: bold; }
+
+.r5-instruction-text {
+    font-size: 1.4rem;
+    color: #000066;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.r5-instruction-text em {
+    font-style: italic;
+}
+
+/* --- BOTTOM SECTION (2 Columns) --- */
+.r5-bottom-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+/* Bottom Column 1 */
+.r5-bot-col-1 {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right align */
+    text-align: right;
+}
+
+.r5-mineral-tests-title {
+    font-size: 1.8rem;
+    color: #000066;
+    font-weight: bold;
+    margin-bottom: 30px; /* 30px padding under text */
+    line-height: 1.2;
+}
+
+/* Bottom Column 2 (80% width) */
+.r5-bot-col-2 {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+/* --- TABLE STYLES --- */
+.r5-tests-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.r5-tests-table th, 
+.r5-tests-table td {
+    padding: 15px 10px;
+    text-align: center;
+    vertical-align: middle; /* Vertically center row text */
+    color: #000066;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid #FFFFFF;
+}
+
+/* Row Colors */
+.row-header { background-color: #E8E8E8; } /* Light Grey */
+.row-hardness { background-color: #FFD1D1; } /* Light Red */
+.row-color { background-color: #E6D9FF; } /* Light Purple */
+.row-streak { background-color: #D1FFD1; } /* Light Green */
+.row-luster { background-color: #FFE6CC; } /* Light Brown */
+
+/* Sub-columns for 'POSSIBLE RESULTS' */
+.result-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.result-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-left: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.result-item:first-child {
+    border-left: none; /* Remove border from first item */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 850px) {
+    .r5-top-section, .r5-bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .r5-top-col-1, .r5-bot-col-1 {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .r5-minerals-links {
+        text-align: center;
+    }
+
+    .r5-bot-col-2 {
+        flex: 1;
+        max-width: 100%;
+        overflow-x: auto; /* Allow table scrolling on small screens */
+    }
+
+    .r5-tests-table {
+        min-width: 600px; /* Prevent table from squishing too much */
+    }
+}
