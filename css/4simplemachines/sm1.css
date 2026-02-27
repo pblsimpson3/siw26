@@ -1,0 +1,111 @@
+/* ========================================
+   SIMPLE MACHINES 1 PAGE SPECIFIC STYLES
+   Path: css/4simplemachines/sm1.css
+   ======================================== */
+
+/* --- Layout Utilities --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION (2 Columns) --- */
+.sm1-top-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Vertical top align */
+    margin-bottom: 40px;
+}
+
+/* Column 1: 20% Width, Right Aligned Image */
+.sm1-top-col-1 {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: flex-end; /* Right align */
+    padding-right: 15px;
+}
+
+/* Column 2: 80% Width, Text Content */
+.sm1-top-col-2 {
+    flex: 0 0 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sm1-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #000066;
+    margin-bottom: 20px; /* 20px bottom padding */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+.sm1-intro-text {
+    text-align: left;
+    font-size: 1.4rem;
+    color: #000066;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* --- MAIN CONTENT (CSS Grid) --- */
+.sm1-grid-section {
+    display: grid;
+    /* Creates 6 equal-width columns */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px; /* 15px spacing between rows and columns */
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sm1-grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically centers the image in its row */
+    width: 100%;
+}
+
+.sm1-grid-item img {
+    max-width: 100%;
+    /* Row heights will naturally adapt to the tallest image in the row */
+}
+
+/* Restrict Max Height of Row 1 (first 6 items) to 128px */
+.sm1-grid-item:nth-child(-n+6) img {
+    max-height: 128px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 850px) {
+    .sm1-top-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sm1-top-col-1, .sm1-top-col-2 {
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .sm1-intro-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Wrap the grid into 3 columns on tablets, 2 on phones */
+    .sm1-grid-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .sm1-grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
