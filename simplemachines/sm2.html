@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is a Simple Machine? - Page 2</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="../css/4simplemachines/sm2.css">
+</head>
+<body>
+
+    <main>
+        <!-- TOP SECTION -->
+        <section class="sm2-top-section">
+            <h1 class="sm2-title">WHAT IS A SIMPLE MACHINE?</h1>
+            <p class="sm2-instruction">Click circles to reveal</p>
+        </section>
+
+        <!-- MAIN SECTION: Interactive Circle Grid -->
+        <section class="sm2-circles-grid" aria-label="Interactive simple machine definitions">
+            
+            <!-- Circle 1: Dark Green -->
+            <button class="sm2-circle-btn bg-dark-green" aria-expanded="false" onclick="toggleCircle(this)" aria-label="Reveal definition of a machine">
+                <span class="circle-text">
+                    A machine<br>
+                    is a device<br>
+                    that does<br>
+                    work
+                </span>
+                <img src="../images/simplemachines/sm1.gif" alt="Collage of simple machines like hammer, seesaw and dust pan" class="circle-img" width="196" height="176">
+            </button>
+
+            <!-- Circle 2: Dark Pink -->
+            <button class="sm2-circle-btn bg-dark-pink" aria-expanded="false" onclick="toggleCircle(this)" aria-label="Reveal information about machine work">
+                <span class="circle-text">
+                    Machines<br>
+                    do not<br>
+                    increase the<br>
+                    work done,<br>
+                    but they<br>
+                    make it<br>
+                    easier
+                </span>
+                <img src="../images/simplemachines/sm2.jpg" alt="Camel and motorcycle" class="circle-img" width="196" height="176">
+            </button>
+
+            <!-- Circle 3: Dark Purple -->
+            <button class="sm2-circle-btn bg-dark-purple" aria-expanded="false" onclick="toggleCircle(this)" aria-label="Reveal how machines change force">
+                <span class="circle-text">
+                    To<br>
+                    make work<br>
+                    easier machines<br>
+                    change the force<br>
+                    itself, its<br>
+                    distance, or its<br>
+                    direction
+                </span>
+                <img src="../images/simplemachines/sm3.jpg" alt="Small, medium and large fulcrum with force arrows" class="circle-img" width="196" height="176">
+            </button>
+
+            <!-- Circle 4: Dark Brown -->
+            <button class="sm2-circle-btn bg-dark-brown" aria-expanded="false" onclick="toggleCircle(this)" aria-label="Reveal examples of simple machines part 1">
+                <span class="circle-text">
+                    Here are<br>
+                    three simple<br>
+                    machines.<br>
+                    lever<br>
+                    pulley<br>
+                    inclined plane
+                </span>
+                <img src="../images/simplemachines/sm4.gif" alt="Illustration of lever, pulley and inclined pland" class="circle-img" width="196" height="176">
+            </button>
+
+            <!-- Circle 5: Dark Rust -->
+            <button class="sm2-circle-btn bg-dark-rust" aria-expanded="false" onclick="toggleCircle(this)" aria-label="Reveal examples of simple machines part 2">
+                <span class="circle-text">
+                    Three<br>
+                    more simple<br>
+                    machines.<br>
+                    wheel & axle<br>
+                    screw<br>
+                    wedge
+                </span>
+                <img src="../images/simplemachines/sm5.jpg" alt="Illustration of a wheel and axle, wedge and screw" class="circle-img" width="196" height="176">
+            </button>
+
+            <!-- Circle 6: Dark Violet -->
+            <button class="sm2-circle-btn bg-dark-violet" aria-expanded="false" onclick="toggleCircle(this)" aria-label="Reveal complex machine definition">
+                <span class="circle-text">
+                    A complex<br>
+                    machine is<br>
+                    made up of two<br>
+                    or more simple<br>
+                    machines
+                </span>
+                <img src="../images/simplemachines/sm6_anicogs.gif" alt="Animated complex machine with gears" class="circle-img" width="196" height="176">
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER NAVIGATION -->
+    <footer class="navigation" aria-label="Navigation">
+        <!-- Back to SM 1 -->
+        <a href="sm1.html" class="nav-button back" aria-label="Back to How Does It Work">
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                <path d="M 28 10 L 12 20 L 28 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="sr-only">Back</span>
+        </a>
+
+        <!-- Forward to SM 3 -->
+        <a href="sm3.html" class="nav-button forward" aria-label="Next to Simple Machines Page 3">
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                <path d="M 12 10 L 28 20 L 12 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </a>
+    </footer>
+
+    <!-- Interactive Script for Accessibility -->
+    <script>
+        function toggleCircle(btn) {
+            // Check current ARIA state
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            // Toggle the ARIA state to naturally trigger CSS transformations
+            btn.setAttribute('aria-expanded', !isExpanded);
+        }
+    </script>
+</body>
+</html>

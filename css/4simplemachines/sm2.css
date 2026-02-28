@@ -1,0 +1,126 @@
+/* ========================================
+   SIMPLE MACHINES 2 PAGE SPECIFIC STYLES
+   Path: css/4simplemachines/sm2.css
+   ======================================== */
+
+/* --- Layout Utilities --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION --- */
+.sm2-top-section {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.sm2-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000066;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.sm2-instruction {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #CC0000; /* Red text */
+    margin-bottom: 30px;
+}
+
+/* --- MAIN SECTION (Interactive Circles Grid) --- */
+.sm2-circles-grid {
+    display: grid;
+    /* 3 columns of exactly 200px each */
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Accessible Interactive Button */
+.sm2-circle-btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2pt solid #000000; /* 2pt black border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* Ensures content stays inside the circle */
+}
+
+/* Focus State for Accessibility */
+.sm2-circle-btn:focus {
+    outline: 4px solid #FFD700;
+    outline-offset: 4px;
+}
+
+.sm2-circle-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Circle Background Colors */
+.bg-dark-green  { background-color: #006400; }
+.bg-dark-pink   { background-color: #C71585; } /* MediumVioletRed */
+.bg-dark-purple { background-color: #4B0082; } /* Indigo */
+.bg-dark-brown  { background-color: #5C4033; }
+.bg-dark-rust   { background-color: #A0522D; } /* Sienna */
+.bg-dark-violet { background-color: #8A2BE2; } /* BlueViolet */
+
+/* Circle Text formatting */
+.circle-text {
+    color: #FFFF00; /* Yellow */
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Circle Image formatting */
+.circle-img {
+    display: none; /* Hidden by default */
+    width: 196px;
+    height: 176px;
+    object-fit: contain;
+    border-radius: 50%; /* Trims edges to fit strictly in circle */
+}
+
+/* --- Interactive Logic (CSS Driven via ARIA) --- */
+/* Hide text when expanded */
+.sm2-circle-btn[aria-expanded="true"] .circle-text {
+    display: none;
+}
+
+/* Show image when expanded */
+.sm2-circle-btn[aria-expanded="true"] .circle-img {
+    display: block;
+}
+
+/* Optional: change background to white when image is showing */
+.sm2-circle-btn[aria-expanded="true"] {
+    background-color: #FFFFFF;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .sm2-circles-grid {
+        grid-template-columns: repeat(2, 200px);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sm2-circles-grid {
+        grid-template-columns: 200px;
+        gap: 20px;
+    }
+}
