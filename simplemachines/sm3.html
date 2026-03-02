@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Machines Passport Assignment 1 - Page 3</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/4simplemachines/sm3.css">
+</head>
+<body>
+
+    <main>
+        <header class="sm3-top-section">
+            <div class="sm3-passport-col">
+                <img src="../images/simplemachines/passportblue.gif" alt="Passport Icon" class="passport-icon">
+            </div>
+            <div class="sm3-header-text-col">
+                <h1 class="sm3-main-title">Simple Machines <span class="purple-text">Passport Assignment 1</span></h1>
+                <p class="sm3-sub-instruction">Research any five simple machines in more detail.</p>
+                <p class="sm3-worksheet-text">Complete the <strong>Simple Machines Worksheet.</strong><br>(see teacher)</p>
+            </div>
+        </header>
+
+        <section class="sm3-info-links">
+            <p>Click on the sites below for the information you need.</p>
+            <div class="links-container">
+                <a href="https://mass.pbslearningmedia.org/resource/idptv11.sci.phys.maf.d4ksim/simple-machines/" target="_blank" rel="noopener">INFO 1</a>
+                <a href="https://oceanexplorer.noaa.gov/wp-content/uploads/2025/04/simple-machines-handout.pdf" target="_blank" rel="noopener">INFO 2</a>
+                <a href="../teacher/pdfs/cub_simple_machines_teacheng.pdf" target="_blank" rel="noopener">INFO 3</a>
+                <a href="https://edheads.org/content/simple-machines/" target="_blank" rel="noopener">INFO 4</a>
+            </div>
+        </section>
+
+        <section class="sm3-interactive-grid">
+            <p class="sm3-click-instruction">Click diamonds to reveal</p>
+            
+            <div class="diamond-grid">
+                <button class="diamond-btn bg-red" aria-expanded="false" onclick="toggleDiamond(this)">
+                    <span class="diamond-text">
+                        A lever is a bar with<br>
+                        a support, called a<br>
+                        fulcrum. The lever is<br>
+                        used to pry things<br>
+                        open or lift heavy<br>
+                        objects a short<br>
+                        distance.
+                    </span>
+                    <img src="../images/simplemachines/1_lever_235px.png" alt="Lever" class="diamond-img">
+                </button>
+
+                <button class="diamond-btn bg-bright-green" aria-expanded="false" onclick="toggleDiamond(this)">
+                    <span class="diamond-text">
+                        The wheel<br>
+                        and axle is a<br>
+                        modification of the<br>
+                        lever. A load attached<br>
+                        to the axle, or spindle,<br>
+                        can be lifted much more<br>
+                        easily by turning the<br>
+                        large wheel than<br>
+                        by turning the<br>
+                        axle itself.
+                    </span>
+                    <img src="../images/simplemachines/2_wheel&axle_stone_235px.png" alt="Wheel and Axle" class="diamond-img">
+                </button>
+
+                <button class="diamond-btn bg-gray" aria-expanded="false" onclick="toggleDiamond(this)">
+                    <span class="diamond-text">
+                        A <br>
+                        pulley is<br>
+                        a wheel with a<br>
+                        grooved rim through<br>
+                        which a rope is passed. <br>
+                        A pulley enables a person <br>
+                        to move an object by pulling <br>
+                        in a direction opposite to <br>
+                        the direction the object<br>
+                        is to be moved.
+                    </span>
+                    <img src="../images/simplemachines/3_pulley_235px.png" alt="Pulley" class="diamond-img">
+                </button>
+
+                <button class="diamond-btn bg-bright-pink" aria-expanded="false" onclick="toggleDiamond(this)">
+                    <span class="diamond-text">
+                        An inclined<br>
+                        plane is a flat<br>
+                        surface that slants<br>
+                        or slopes. Heavy objects<br>
+                        are more easily moved<br>
+                        by pushing them up an<br>
+                        inclined plane rather <br>
+                        than by lifting.
+                    </span>
+                    <img src="../images/simplemachines/4_inclined_plane_235px.png" alt="Inclined Plane" class="diamond-img">
+                </button>
+
+                <button class="diamond-btn bg-bright-purple" aria-expanded="false" onclick="toggleDiamond(this)">
+                    <span class="diamond-text">
+                        The wedge<br>
+                        is an adaption of<br>
+                        the inclined plane. It<br>
+                        is actually two inclined<br>
+                        planes together. Wedges<br>
+                        are useful in cutting or<br>
+                        splitting things.
+                    </span>
+                    <img src="../images/simplemachines/5_wedge_235px.png" alt="Wedge" class="diamond-img">
+                </button>
+
+                <button class="diamond-btn bg-yellow" aria-expanded="false" onclick="toggleDiamond(this)">
+                    <span class="diamond-text">
+                        <br>The screw is a<br>
+                        spiral inclined plane.<br>
+                        It can lift a heavy object<br>
+                        easily, as when a car <br>
+                        jack, that utilizes <br>
+                        a crank, lifts an<br>
+                        automobile.
+                    </span>
+                    <img src="../images/simplemachines/6_screw_a_235px.png" alt="Screw" class="diamond-img">
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="navigation">
+        <a href="sm2.html" class="nav-button back" aria-label="Back to Page 2">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <path d="M 28 10 L 12 20 L 28 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="sm4.html" class="nav-button forward" aria-label="Forward to Page 4">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <path d="M 12 10 L 28 20 L 12 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </footer>
+
+    <script>
+        function toggleDiamond(btn) {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !isExpanded);
+        }
+    </script>
+</body>
+</html>
