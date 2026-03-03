@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple and Complex Machines at Saugus Iron Works - Page 5</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/4simplemachines/sm5.css">
+</head>
+<body>
+
+    <main>
+        <header class="sm5-top-section">
+            <div class="sm5-rick-col">
+                <img src="../images/simplemachines/RangerRick2bigR.jpg" alt="Ranger Rick" class="rick-large">
+            </div>
+            <div class="sm5-header-text-col">
+                <p class="intro-bold">In 1646, simple and complex machines were the driving force behind the bustling industry at the Saugus Iron Works.</p>
+                <p class="instruction-text">
+                    In the pictures below, find these simple machines at the Iron Works: 
+                    <strong>Lever, Wheel & Axle, Pulley, Inclined Plane, Wedge, Gears.</strong><br>
+                    Complete the <em>SIW Simple Machines worksheet.</em>
+                </p>
+            </div>
+        </header>
+
+        <section class="sm5-viewer-container" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading" class="sr-only">Saugus Iron Works Machine Gallery</h2>
+            
+            <div class="main-viewer" aria-live="polite">
+                <button class="viewer-nav prev" onclick="changePhoto(-1)" aria-label="Previous photo">&#10094;</button>
+                
+                <div class="photo-display">
+                    <img id="main-photo" src="../images/simplemachines/1_sluice_gate.jpg" alt="Sluice Gate at Saugus Iron Works" width="600" height="400">
+                    <div id="photo-caption" class="caption">Sluice Gate</div>
+                </div>
+
+                <button class="viewer-nav next" onclick="changePhoto(1)" aria-label="Next photo">&#10095;</button>
+            </div>
+
+            <div class="thumbnail-grid" role="tablist">
+                <button class="thumb-btn active" onclick="setPhoto(0)" role="tab" aria-selected="true">
+                    <img src="../images/simplemachines/1_sluice_gate.jpg" alt="Thumbnail 1">
+                </button>
+                <button class="thumb-btn" onclick="setPhoto(1)" role="tab" aria-selected="false">
+                    <img src="../images/simplemachines/2_water_channel.jpg" alt="Thumbnail 2">
+                </button>
+                <button class="thumb-btn" onclick="setPhoto(2)" role="tab" aria-selected="false">
+                    <img src="../images/simplemachines/3_hammer_belt.jpg" alt="Thumbnail 3">
+                </button>
+                <button class="thumb-btn" onclick="setPhoto(3)" role="tab" aria-selected="false">
+                    <img src="../images/simplemachines/4_wheel_mechanism.jpg" alt="Thumbnail 4">
+                </button>
+                <button class="thumb-btn" onclick="setPhoto(4)" role="tab" aria-selected="false">
+                    <img src="../images/simplemachines/5_wooden_beam_pegs.jpg" alt="Thumbnail 5">
+                </button>
+                <button class="thumb-btn" onclick="setPhoto(5)" role="tab" aria-selected="false">
+                    <img src="../images/simplemachines/6_waterwheel_undershot.jpg" alt="Thumbnail 6">
+                </button>
+            </div>
+        </section>
+
+        <section class="sm5-footer-question">
+            <p>Which simple machine could you not find in the above pictures? That's because it is not part of the machinery of the Iron Works. What job COULD this machine perform in the iron making process?</p>
+        </section>
+    </main>
+
+    <footer class="navigation">
+        <a href="sm4.html" class="nav-button back" aria-label="Back to Page 4">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <path d="M 28 10 L 12 20 L 28 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="sm6.html" class="nav-button forward" aria-label="Forward to Page 6">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <path d="M 12 10 L 28 20 L 12 30" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </footer>
+
+    <script>
+        const photos = [
+            { src: "../images/simplemachines/1_sluice_gate.jpg", cap: "Sluice Gate" },
+            { src: "../images/simplemachines/2_water_channel.jpg", cap: "Water Channel" },
+            { src: "../images/simplemachines/3_hammer_belt.jpg", cap: "Hammer with Metal Belt" },
+            { src: "../images/simplemachines/4_wheel_mechanism.jpg", cap: "Water Wheel Mechanism" },
+            { src: "../images/simplemachines/5_wooden_beam_pegs.jpg", cap: "Wooden Beam and Pegs" },
+            { src: "../images/simplemachines/6_waterwheel_undershot.jpg", cap: "Undershot Waterwheel" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateGallery() {
+            const mainImg = document.getElementById('main-photo');
+            const caption = document.getElementById('photo-caption');
+            const thumbs = document.querySelectorAll('.thumb-btn');
+
+            mainImg.src = photos[currentIndex].src;
+            caption.textContent = photos[currentIndex].cap;
+
+            thumbs.forEach((btn, idx) => {
+                const isActive = idx === currentIndex;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive);
+            });
+        }
+
+        function changePhoto(dir) {
+            currentIndex += dir;
+            if (currentIndex < 0) currentIndex = photos.length - 1;
+            if (currentIndex >= photos.length) currentIndex = 0;
+            updateGallery();
+        }
+
+        function setPhoto(index) {
+            currentIndex = index;
+            updateGallery();
+        }
+    </script>
+</body>
+</html>

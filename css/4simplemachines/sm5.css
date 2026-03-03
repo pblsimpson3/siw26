@@ -1,0 +1,162 @@
+/* --- Layout --- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000066;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- TOP SECTION --- */
+.sm5-top-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sm5-rick-col {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 25px;
+}
+
+.rick-large {
+    width: 171px;
+    height: 159px;
+    display: block;
+    margin-left: auto;
+}
+
+.sm5-header-text-col {
+    flex: 0 0 80%;
+}
+
+.intro-bold {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.instruction-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* --- PHOTO VIEWER --- */
+.sm5-viewer-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.main-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.photo-display {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: #000;
+    border: 4px solid #000066;
+    overflow: hidden;
+}
+
+.photo-display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 102, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.viewer-nav {
+    background: #000066;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.viewer-nav:hover { background: #990099; }
+
+/* Thumbnail Grid */
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.thumb-btn {
+    border: 3px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumb-btn img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+}
+
+.thumb-btn.active {
+    border-color: #990099;
+}
+
+/* --- FOOTER CONTENT --- */
+.sm5-footer-question {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 50px;
+    line-height: 1.4;
+}
+
+/* --- FOOTER NAV --- */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.nav-button {
+    background-color: #000066;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .photo-display {
+        width: 100%;
+        height: auto;
+    }
+    .sm5-top-section { flex-direction: column; text-align: center; }
+    .sm5-rick-col { padding-right: 0; margin-bottom: 15px; }
+}
