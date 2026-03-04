@@ -1,0 +1,151 @@
+/* --- Layout --- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000066;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- TOP SECTION --- */
+.sm6-top-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.sm6-passport-col {
+    flex: 0 0 15%; /* 15% Width */
+    text-align: right;
+    padding-right: 20px;
+}
+
+.sm6-header-text-col {
+    flex: 0 0 85%; /* 85% Width */
+    text-align: left;
+}
+
+.sm6-main-title {
+    font-size: 2rem;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+.purple-text {
+    color: #990099;
+}
+
+.sm6-instructions {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #000066;
+}
+
+/* --- MIDDLE SECTION --- */
+.sm6-middle-section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.rg-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 20px padding between images */
+}
+
+.rg-images-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- BOTTOM SECTION --- */
+.sm6-bottom-section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sm6-bottom-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sm6-bottom-side-img {
+    flex: 0 0 25%; /* Space for images on either side */
+    display: flex;
+    justify-content: center;
+}
+
+.sm6-bottom-text {
+    flex: 0 0 50%; /* Text occupies 50% width */
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.sm6-bottom-text a {
+    color: #000066;
+    text-decoration: underline;
+}
+
+/* --- FOOTER NAVIGATION (3 Arrows Style) --- */
+.navigation-3-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 45px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+}
+
+.nav-button img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-label {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1.2;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 850px) {
+    .sm6-top-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sm6-passport-col {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    .sm6-header-text-col {
+        text-align: center;
+    }
+    .rg-images-container {
+        flex-wrap: wrap;
+    }
+    .sm6-bottom-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
