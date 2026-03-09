@@ -1,0 +1,232 @@
+/* Shared Rubric Styles for SIW26 
+   Used for: Colonial Life, Rocks & Minerals, Simple Machines
+*/
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #e8f4f8;
+    --border-color: #bdc3c7;
+    --text-main: #333333;
+    --text-light: #666666;
+    --link-color: #2980b9;
+    --link-hover: #1abc9c;
+    --bg-main: #ffffff;
+    --bg-alt: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+}
+
+.rubric-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-main);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rubric-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rubric-header h1 {
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+}
+
+.rubric-header h2 {
+    color: var(--text-light);
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Table Wrapper for horizontal scrolling on small screens */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.evaluation-rubric {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 800px; /* Ensures table doesn't squish too much on mobile */
+}
+
+.evaluation-rubric th,
+.evaluation-rubric td {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.evaluation-rubric thead th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.evaluation-rubric thead th span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+/* Specific Column Widths */
+.col-assignment { width: 20%; }
+.col-5pt { width: 20%; }
+
+/* Row Headers (Assignment Names) */
+.evaluation-rubric tbody th {
+    background-color: var(--bg-alt);
+    font-weight: bold;
+}
+
+.evaluation-rubric tbody th a {
+    color: var(--link-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.evaluation-rubric tbody th a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+.task-ref {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: normal;
+}
+
+/* Highlight the 5-point column to emphasize the target goal */
+.highlight-cell {
+    background-color: var(--accent-color);
+    border-left: 2px solid var(--link-color);
+    border-right: 2px solid var(--link-color);
+}
+
+/* Alternating row colors for readability */
+.evaluation-rubric tbody tr:nth-child(even) td:not(.highlight-cell),
+.evaluation-rubric tbody tr:nth-child(even) th {
+    background-color: #fdfdfd;
+}
+
+/* Checklist footer */
+.rubric-footer {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #F0F8FF;
+    border: 2px solid #003366;
+    text-align: center;
+}
+
+.rubric-footer p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+    margin: 0;
+}
+
+/* ========================================
+   CSS-BASED NAVIGATION ARROWS
+   ======================================== */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+    align-items: center;
+}
+
+/* Navigation Button Base - Replicate original arrow appearance */
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Arrow SVG Container */
+.nav-button svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Back Arrow - Blue gradient background */
+.nav-button.back {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Forward Arrow - Blue gradient background */
+.nav-button.forward {
+    background: linear-gradient(-135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover State - Brightens and slightly enlarges */
+.nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Active/Click State */
+.nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95);
+}
+
+/* Focus State for Keyboard Navigation */
+.nav-button:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Arrow Paths - White color to contrast with blue background */
+.nav-button path {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Accessibility - Screen Reader Text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
