@@ -1,0 +1,123 @@
+/* ========================================
+   CONCLUSION PAGE SPECIFIC STYLES
+   Path: css/5end/conclusion.css
+   ======================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TOP SECTION --- */
+.concl-top-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.concl-top-col-1 {
+    flex: 0 0 80%;
+}
+
+.concl-top-col-2 {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.concl-intro-text {
+    font-size: 1.4rem;
+    color: #000066;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+/* --- MIDDLE SECTION: Photo Grid --- */
+.concl-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px; /* 25px padding between photo columns */
+    row-gap: 40px;
+    margin-bottom: 50px;
+}
+
+.concl-photo-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for caption text to ensure horizontal alignment of images */
+.concl-caption-box {
+    min-height: 80px; /* Forces equal height for unequal text */
+    display: flex;
+    align-items: flex-end; /* Aligns text to bottom of box */
+    margin-bottom: 15px; /* 15px spacing between text and photo */
+}
+
+.concl-caption-box p {
+    font-size: 1.1rem;
+    color: #000066;
+    font-weight: bold;
+    margin: 0;
+}
+
+.concl-img {
+    width: 400px; /* Display width per requirement */
+    height: auto;
+    border: 2px solid #000066;
+}
+
+/* --- BOTTOM SECTION --- */
+.concl-bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    margin-bottom: 60px;
+}
+
+.concl-contact-box {
+    font-size: 1.2rem;
+    color: #000066;
+    font-weight: bold;
+}
+
+.concl-link {
+    color: #000066;
+    text-decoration: underline;
+}
+
+.concl-link:hover {
+    color: #CC0000;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .concl-top-section, 
+    .concl-photo-grid, 
+    .concl-bottom-section {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .concl-top-col-1, .concl-top-col-2 {
+        flex: 1;
+    }
+
+    .concl-caption-box {
+        min-height: auto;
+        justify-content: center;
+    }
+
+    .concl-img {
+        margin: 0 auto;
+    }
+}
