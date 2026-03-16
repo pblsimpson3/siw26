@@ -1,0 +1,295 @@
+/* ========================================
+   GAMESHOW PAGE SPECIFIC STYLES
+   Path: css/5end/endgameshow.css
+   ======================================== */
+
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* FIX: Explicitly set to block to allow global.css margin: 0 auto to work */
+    display: block; 
+    width: 100%;
+}
+
+main {
+    /* Standard SIW unit page width matching global.css */
+    max-width: 840px; 
+    width: 100%;
+    margin: 0 auto;  /* This performs the actual centering */
+    padding: 20px;
+}
+
+/* --- NEON HEADER --- */
+.gameshow-header {
+    text-align: center;
+    background: #111; 
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #00e6e6,
+        0 0 30px #00e6e6,
+        0 0 40px #00e6e6;
+}
+
+/* --- LAYOUT GRID --- */
+.gameshow-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.host-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border: 5px solid #333;
+    border-radius: 10px;
+}
+
+/* --- SPEECH BUBBLE --- */
+.speech-bubble {
+    position: relative;
+    background: #90EE90;
+    border: 3px solid #006400;
+    border-radius: 20px;
+    padding: 30px;
+    color: #000;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 15px 30px 15px 0;
+    border-style: solid;
+    border-color: transparent #006400 transparent transparent;
+}
+
+/* --- AUDIO SECTION --- */
+.audio-player-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+
+.ear-icon {
+    width: 84px;
+    height: 68px;
+    flex-shrink: 0;
+}
+
+.audio-controls {
+    flex: 1;
+}
+
+.audio-label {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    color: #000066;
+}
+
+audio {
+    width: 100%;
+    min-width: 250px; 
+    height: 40px;
+}
+
+/* --- GIFS AND ACTION --- */
+.gif-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.gameshow-gif {
+    height: 125px;
+}
+
+.action-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clown-gif {
+    height: 140px;
+}
+
+/* --- INTERACTIVE PUSH BUTTON --- */
+.push-button-link {
+    text-decoration: none;
+}
+
+.push-button {
+    width: 85px;
+    height: 85px;
+    background: #cc0000;
+    border-radius: 50%;
+    border: 4px solid #333;
+    box-shadow: 0 6px #660000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.push-text {
+    font-weight: bold;
+    font-size: 1.3rem;
+    animation: blinkText 0.8s infinite;
+}
+
+.push-button:active {
+    box-shadow: 0 2px #660000;
+    transform: translateY(4px);
+}
+
+@keyframes blinkText {
+    0% { color: #FFFF00; }
+    50% { color: #FF0000; }
+    100% { color: #FFFF00; }
+}
+
+/* ========================================
+   CSS-BASED NAVIGATION ARROWS  
+   ======================================== */
+
+/* Does not use global.css to avoid body selector conflict. */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+    align-items: center;
+}
+
+/* Navigation Button Base - Replicate original arrow appearance */
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Arrow SVG Container */
+.nav-button svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Back Arrow - Blue gradient background */
+.nav-button.back {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Forward Arrow - Blue gradient background */
+.nav-button.forward {
+    background: linear-gradient(-135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Up Arrow - Blue gradient background */
+.nav-button.up {
+    background: linear-gradient(to bottom, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover State - Brightens and slightly enlarges */
+.nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Active/Click State */
+.nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95);
+}
+
+/* Focus State for Keyboard Navigation */
+.nav-button:focus {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Arrow Paths - White color to contrast with blue background */
+.nav-button path {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.nav-label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #000066;
+    text-align: center;
+}
+
+/* Accessibility - Screen Reader Text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    main {
+        width: 95%;
+    }
+    .gameshow-layout {
+        grid-template-columns: 1fr;
+    }
+}
