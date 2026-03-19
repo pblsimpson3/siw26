@@ -1,0 +1,110 @@
+/* ========================================
+   GAMESHOW QUIZ PAGE SPECIFIC STYLES
+   Path: css/5end/endgameshow2.css
+   ======================================== */
+
+/* --- TOP BANNER --- */
+.gameshow-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.light-set {
+    display: flex;
+    gap: 5px; /* 5px padding between light images */
+    align-items: center;
+}
+
+.banner-light {
+    width: auto;
+    height: 100px; /* Maintain height to keep sign vertically aligned */
+    display: block;
+}
+
+.banner-title-box {
+    width: 250px; /* Per request: 250 wide box */
+    background-color: #FF69B4; /* Hot Pink */
+    border: 3px solid #000000;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-main-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.banner-subhead {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 5px;
+}
+
+/* --- QUIZ IFRAME --- */
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.quiz-container iframe {
+    max-width: 100%;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- THANK YOU BOX --- */
+.thank-you-box {
+    width: 100%; /* Full width */
+    background-color: #FF69B4; /* Hot Pink */
+    border: 2px solid #000000;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.thank-you-box p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.ty-show-title {
+    font-size: 2rem !important;
+    text-transform: uppercase;
+}
+
+.ty-subhead {
+    font-size: 1rem !important;
+    font-style: italic;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 800px) {
+    .gameshow-banner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner-title-box {
+        width: 90%;
+    }
+    
+    .quiz-container iframe {
+        width: 100%;
+        height: 600px; /* Smaller height for mobile */
+    }
+}
